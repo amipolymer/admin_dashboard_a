@@ -1,0 +1,134 @@
+/* .btn {
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0;
+    font-weight: 500;
+    padding: 3px 5px;
+    font-size: 14px;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+    padding-left: .2rem;
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    display: inline-block;
+    padding-right: .2rem;
+    color: #6c757d;
+    content: "/";
+} */
+ .brand-logo
+{
+	background-color: aliceblue !important;
+}
+.sidebar-light .brand-logo{
+    background-color: #fff !important;
+}
+@media (max-width: 767px) {
+.gridjs-search{
+    width: 100%;;
+}
+.gridjs-search-input
+{
+    width: 100% !important;
+}
+.gridjs-pagination .gridjs-summary {
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.gridjs-pagination .gridjs-pages
+{
+    float: unset !important;
+}
+th.gridjs-th {
+    text-align: center;
+}
+.gridjs-tbody, td.gridjs-td {
+    background-color: #fff;
+    text-align: center;
+}
+.back_title
+{
+    display: none !important;
+}
+.h4, .h5, .page-header h4{
+    font-size: 20px !important;
+    padding-bottom: 0px !important;
+}
+
+.page-header .row .col-md-6.col-left {
+    width: 70% !important;
+    padding: 0 !important;
+    padding-left: 10px !important;
+}
+.page-header .row .col-md-6.col-right {
+    width: 30% !important;
+    padding: 0 !important;
+    text-align: left !important;
+}
+.page-header .row .col-md-6.col-left-form {
+    width: 85% !important;
+    padding: 0 !important;
+    padding-left: 10px !important;
+}
+.page-header .row .col-md-6.col-right-form {
+    width: 15% !important;
+    padding: 0 !important;
+            text-align: left !important;
+}
+a.add_button.text-primary.btn-sm.border.border-primary.p-2.h4 {
+    font-size: 12px !important;
+    margin-right: 5px !important;
+    padding: 5px    !important;
+}
+a.back_button.text-danger.border.btn-sm.border-danger.p-2.h4 {
+    font-size: 12px !important;
+    padding: 5px    !important;
+}
+
+.breadcrumb-item a
+{
+    font-size: 12px !important;
+}
+.gridjs-tr td{
+    font-size: 12px !important;
+}
+.gridjs-tr th{
+    font-size: 12px !important;
+}
+.gridjs-pagination .gridjs-pages button {
+    padding: 0px 4px !important;
+}
+.gridjs-pagination
+{
+    text-align: center !important;
+}
+.gridjs-pagination .gridjs-summary
+{
+    font-size: 12px !important;
+    float: unset !important;
+}
+.btn-group .btn-sm {
+    padding: 2px 5px;
+    height: fit-content;
+}
+}
+
+.gridjs-tbody, td.gridjs-td {
+    background-color: #fff;
+    text-align: center;
+}
+th.gridjs-th {
+    text-align: center;
+}
+textarea.form-control
+{
+    height: auto !important;
+}
+
+td.gridjs-td{
+	padding: 2px !important;
+}
+th.gridjs-th
+{
+    padding: 3px !important;
+}
