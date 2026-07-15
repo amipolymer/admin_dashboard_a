@@ -1,0 +1,480 @@
+{
+  "version": 9,
+  "storage_key": "information",
+  "bgv_reference": "resources/views/emails/ongird_need_basic_data.txt",
+  "sections": [
+    {
+      "key": "basic_information",
+      "title": "1. Basic Information",
+      "intro": "Fields marked * are required",
+      "fields": {
+        "application_source": {
+          "name": "application_source",
+          "label": "Source (e.g. HR, Social Media, Website, Job Portal)",
+          "type": "text",
+          "required": true,
+          "placeholder": "Type how you heard about us",
+          "class": "form-control required-field",
+          "col": "col-md-6 mb-3"
+        },
+        "other_profession": {
+          "name": "other_profession",
+          "label": "Job title / role (otherProfession)",
+          "type": "text",
+          "required": false,
+          "placeholder": "e.g. Engineer, Accountant",
+          "class": "form-control",
+          "col": "col-md-6 mb-3"
+        },
+        "name": {
+          "name": "name",
+          "label": "Name (As Per Aadhaar)",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter full name",
+          "class": "form-control required-field",
+          "col": "col-md-6 mb-3"
+        },
+        "fathers_name": {
+          "name": "fathers_name",
+          "label": "Father's Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter father's name",
+          "class": "form-control required-field",
+          "col": "col-md-6 mb-3"
+        },
+        "gender": {
+          "name": "gender",
+          "label": "Gender",
+          "type": "select",
+          "required": true,
+          "class": "form-select required-field",
+          "col": "col-md-3 mb-3",
+          "options": ["", "Male", "Female", "Other"]
+        },
+        "religion": {
+          "name": "religion",
+          "label": "Religion",
+          "type": "text",
+          "required": true,
+          "placeholder": "Enter religion",
+          "class": "form-control required-field",
+          "col": "col-md-3 mb-3"
+        },
+        "dob": {
+          "name": "dob",
+          "label": "Date of Birth",
+          "type": "date",
+          "required": true,
+          "class": "form-control required-field",
+          "col": "col-md-3 mb-3"
+        },
+        "state": {
+          "name": "state",
+          "label": "State",
+          "type": "state_select",
+          "required": true,
+          "class": "form-select required-field",
+          "col": "col-md-3 mb-3"
+        },
+        "city": {
+          "name": "city",
+          "label": "City",
+          "type": "city_select",
+          "state_field": "state",
+          "other_field": "city_other",
+          "required": true,
+          "class": "form-select required-field",
+          "col": "col-md-3 mb-3"
+        },
+        "mobile_phone": {
+          "type": "phone",
+          "label": "Mobile Number",
+          "required": true,
+          "col": "col-md-3 mb-3",
+          "code_name": "phone_country_code",
+          "number_name": "phone",
+          "code_default": "+91",
+          "number_placeholder": "10 digit mobile number",
+          "maxlength": 10
+        },
+        "alternate_mobile_phone": {
+          "type": "phone",
+          "label": "Alternate Mobile Number",
+          "required": false,
+          "col": "col-md-6 mb-3",
+          "code_name": "alternate_phone_country_code",
+          "number_name": "alternate_phone",
+          "code_default": "+91",
+          "number_placeholder": "Optional",
+          "maxlength": 10
+        },
+        "uid": {
+          "name": "uid",
+          "label": "Aadhaar Number",
+          "type": "text",
+          "required": true,
+          "digits_only": true,
+          "placeholder": "12-digit Aadhaar (digits only)",
+          "class": "form-control required-field",
+          "col": "col-md-3 mb-3",
+          "maxlength": 12
+        },
+        "pan": {
+          "name": "pan",
+          "label": "PAN Number",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. ABCDE1234F",
+          "class": "form-control required-field text-uppercase",
+          "col": "col-md-3 mb-3",
+          "maxlength": 10
+        },
+        "email": {
+          "name": "email",
+          "label": "Personal Email ID",
+          "type": "email",
+          "required": true,
+          "placeholder": "email@example.com",
+          "class": "form-control required-field",
+          "col": "col-md-6 mb-3"
+        },
+        "uan": {
+          "name": "uan",
+          "label": "UAN / PF Number",
+          "type": "text",
+          "required": false,
+          "placeholder": "Universal Account Number",
+          "class": "form-control",
+          "col": "col-md-3 mb-3"
+        },
+        "voters_id_number": {
+          "name": "voters_id_number",
+          "label": "Voter's ID Number",
+          "type": "text",
+          "required": false,
+          "default": "Not applicable",
+          "placeholder": "Not applicable",
+          "class": "form-control",
+          "col": "col-md-3 mb-3"
+        },
+        "blood_group": {
+          "name": "blood_group",
+          "label": "Blood Group",
+          "type": "select",
+          "required": true,
+          "class": "form-select required-field",
+          "col": "col-md-3 mb-3",
+          "options": ["", "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-"]
+        },      
+        "driving_license_number": {
+          "name": "driving_license_number",
+          "label": "Driving License Number",
+          "type": "text",
+          "required": false,
+          "default": "Not applicable",
+          "placeholder": "Not applicable",
+          "class": "form-control",
+          "col": "col-md-3 mb-3"
+        },
+        "driving_license_valid_till": {
+          "name": "driving_license_valid_till",
+          "label": "Driving License Valid till",
+          "type": "text",
+          "required": false,
+          "default": "Not applicable",
+          "placeholder": "dd/mm/yyyy or Not applicable",
+          "class": "form-control",
+          "col": "col-md-3 mb-3"
+        },
+        "passport_number": {
+          "name": "passport_number",
+          "label": "Passport Number",
+          "type": "text",
+          "required": false,
+          "default": "Not applicable",
+          "placeholder": "Not applicable",
+          "class": "form-control",
+          "col": "col-md-3 mb-3"
+        },
+        "passport_validity": {
+          "name": "passport_validity",
+          "label": "Passport Validity",
+          "type": "text",
+          "required": false,
+          "default": "Not applicable",
+          "placeholder": "dd/mm/yyyy or Not applicable",
+          "class": "form-control",
+          "col": "col-md-3 mb-3"
+        },
+        "marital_status": {
+          "name": "marital_status",
+          "label": "Marital Status",
+          "type": "select",
+          "required": true,
+          "class": "form-select",
+          "col": "col-md-3 mb-3",
+          "options": ["", "Single", "Married"]
+        },
+        "spouse_name": {
+          "name": "spouse_name",
+          "label": "Spouse Name",
+          "type": "text",
+          "required": false,
+          "placeholder": "Required if married",
+          "class": "form-control spouse-field",
+          "col": "col-md-6 mb-3",
+          "show_when_married": true
+        },
+        "has_company_contacts": {
+          "name": "has_company_contacts",
+          "label": "Do you have any relatives or known contacts currently working at {company_name}?",
+          "type": "select",
+          "required": true,
+          "class": "form-select required-field",
+          "col": "col-12 mb-3",
+          "options": ["", "No", "Yes"]
+        },
+        "company_contact_name": {
+          "name": "company_contact_name",
+          "label": "Contact Name",
+          "type": "text",
+          "required": false,
+          "placeholder": "Full name",
+          "class": "form-control company-contact-field",
+          "col": "col-md-4 mb-3",
+          "show_when_yes": true
+        },
+        "company_contact_relationship": {
+          "name": "company_contact_relationship",
+          "label": "Relationship",
+          "type": "text",
+          "required": false,
+          "placeholder": "e.g. Cousin, Friend",
+          "class": "form-control company-contact-field",
+          "col": "col-md-4 mb-3",
+          "show_when_yes": true
+        },
+        "company_contact_department": {
+          "name": "company_contact_department",
+          "label": "Department",
+          "type": "text",
+          "required": false,
+          "placeholder": "Department / function",
+          "class": "form-control company-contact-field",
+          "col": "col-md-4 mb-3",
+          "show_when_yes": true
+        }
+      }
+    },
+    {
+      "key": "address_details",
+      "title": "2. Address Details ",
+      "groups": [
+        {
+          "title": "Current Address",
+          "css_class": "address-box mb-4",
+          "fields": {
+            "current_co": { "name": "current_co", "label": "C/O (Care Of)", "type": "text", "required": false, "class": "form-control current-address", "col": "col-md-6 mb-3", "placeholder": "Optional" },
+            "current_line1": { "name": "current_line1", "label": "Address Line 1", "type": "text", "required": true, "class": "form-control required-field current-address", "col": "col-md-6 mb-3", "placeholder": "Address line 1" },
+            "current_line2": { "name": "current_line2", "label": "Address Line 2", "type": "text", "required": false, "class": "form-control current-address", "col": "col-md-6 mb-3" },
+            "current_locality": { "name": "current_locality", "label": "Locality", "type": "text", "required": true, "class": "form-control required-field current-address", "col": "col-md-4 mb-3" },
+            "current_state": { "name": "current_state", "label": "State", "type": "state_select", "required": true, "class": "form-select required-field current-address", "col": "col-md-4 mb-3" },
+            "current_city": { "name": "current_city", "label": "City", "type": "city_select", "state_field": "current_state", "other_field": "current_city_other", "required": true, "class": "form-select required-field current-address", "col": "col-md-4 mb-3" },
+            "current_country": { "name": "current_country", "label": "Country", "type": "text", "required": true, "class": "form-control required-field current-address", "col": "col-md-4 mb-3", "default": "India" },
+            "current_pincode": { "name": "current_pincode", "label": "Pin Code", "type": "text", "required": true, "class": "form-control required-field current-address", "col": "col-md-4 mb-3" },
+            "current_landmark": { "name": "current_landmark", "label": "Landmark", "type": "text", "required": true, "class": "form-control required-field current-address", "col": "col-md-4 mb-3" },
+            "current_full_address": { "name": "current_full_address", "label": "Full Current Address", "type": "textarea", "required": true, "class": "form-control required-field", "col": "col-12 mb-3", "rows": 3 }
+          }
+        },
+        {
+          "title": "Permanent Address",
+          "css_class": "address-box",
+          "same_as_current": true,
+          "fields": {
+            "permanent_co": { "name": "permanent_co", "label": "C/O (Care Of)", "type": "text", "required": true, "class": "form-control required-field permanent-address", "col": "col-md-6 mb-3", "placeholder": "Father / Guardian name if applicable" },
+            "permanent_line1": { "name": "permanent_line1", "label": "Address Line 1 (line1)", "type": "text", "required": true, "class": "form-control required-field permanent-address", "col": "col-md-6 mb-3" },
+            "permanent_line2": { "name": "permanent_line2", "label": "Address Line 2", "type": "text", "required": false, "class": "form-control permanent-address", "col": "col-md-6 mb-3" },
+            "permanent_locality": { "name": "permanent_locality", "label": "Locality", "type": "text", "required": true, "class": "form-control required-field permanent-address", "col": "col-md-4 mb-3" },
+            "permanent_state": { "name": "permanent_state", "label": "State", "type": "state_select", "required": true, "class": "form-select required-field permanent-address", "col": "col-md-4 mb-3" },
+            "permanent_city": { "name": "permanent_city", "label": "City", "type": "city_select", "state_field": "permanent_state", "other_field": "permanent_city_other", "required": true, "class": "form-select required-field permanent-address", "col": "col-md-4 mb-3" },
+            "permanent_country": { "name": "permanent_country", "label": "Country", "type": "text", "required": true, "class": "form-control required-field permanent-address", "col": "col-md-4 mb-3", "default": "India" },
+            "permanent_pincode": { "name": "permanent_pincode", "label": "Pin Code", "type": "text", "required": true, "class": "form-control required-field permanent-address", "col": "col-md-4 mb-3" },
+            "permanent_landmark": { "name": "permanent_landmark", "label": "Landmark", "type": "text", "required": true, "class": "form-control required-field permanent-address", "col": "col-md-4 mb-3" },
+            "permanent_full_address": { "name": "permanent_full_address", "label": "Full Permanent Address", "type": "textarea", "required": true, "class": "form-control required-field", "col": "col-12 mb-3", "rows": 3 }
+          }
+        }
+      ]
+    },
+    {
+      "key": "education_qualification",
+      "title": "3. Education Details",
+      "type": "repeatable_table",
+      "intro": "Add each qualification — required for education verification.",
+      "information" : "YOP - Year of passing || Reg. no. - Registration number || Issue date - Issue date of the certificate || FOS - Field of study",
+      "columns": [
+ 
+        { "key": "degree", "label": "Degree", "type": "text", "required": true },
+        { "key": "name_of_institute", "label": "Institute", "type": "text", "required": true },
+        { "key": "year_of_passing", "label": "YOP", "type": "text", "required": true },
+        { "key": "registration_number", "label": "Reg. no.", "type": "text", "required": false },
+        { "key": "issue_date", "label": "Issue date", "type": "date", "required": true },
+        { "key": "field_of_study", "label": "FOS", "type": "text", "required": false },
+        { "key": "name_of_board_university", "label": "University", "type": "text", "required": false },
+        { "key": "grade", "label": "Grade / %", "type": "text", "required": false }
+      ]
+    },
+    {
+      "key": "family_details",
+      "title": "4. Family Details",
+      "type": "family_section",
+      "intro": "Add Father and Mother with Name, Relation, Age, DOB and Occupation. If you are single / not married, or cannot provide parent details, tick the option below to continue.",
+      "header_fields": {
+        "no_father_mother": {
+          "name": "no_father_mother",
+          "label": "I am single / not married, or I do not have father & mother details to provide",
+          "type": "checkbox",
+          "required": false,
+          "class": "form-check-input family-no-parents-toggle",
+          "col": "col-12 mb-3"
+        },
+        "spouse_name": {
+          "name": "spouse_name",
+          "label": "Spouse Name",
+          "type": "text",
+          "required": false,
+          "class": "form-control family-spouse-field",
+          "col": "col-md-6 mb-3",
+          "show_when_married": true
+        },
+        "include_spouse": {
+          "name": "include_spouse",
+          "label": "Include spouse in family list below",
+          "type": "checkbox",
+          "required": false,
+          "class": "form-check-input family-include-spouse",
+          "col": "col-12 mb-3",
+          "show_when_married": true
+        }
+      },
+      "table_title": "Family members",
+      "columns": [
+        { "key": "name", "label": "Name", "type": "text", "required": true },
+        { "key": "relation", "label": "Relation", "type": "text", "required": true },
+        { "key": "age", "label": "Age", "type": "text", "required": true },
+        { "key": "dob", "label": "DOB", "type": "date", "required": true },
+        { "key": "occupation", "label": "Occupation", "type": "text", "required": true }
+      ]
+    },
+    {
+      "key": "previous_employment",
+      "title": "5. Previous Employment Details",
+      "type": "employment_with_footer",
+      "optional": true,
+      "intro": "Use + Add for each previous employer. Enter your joining date at that company. HR will add the last working date for background verification (EMPV). CTC and HR fields below are for your most recent prior employer only.",
+      "table_title": "Previous employment history",
+      "columns": [
+        { "key": "employer_name", "label": "Company name", "type": "text", "required": true },
+        { "key": "last_designation", "label": "Designation", "type": "text", "required": true },
+        { "key": "last_working_city", "label": "Last working city", "type": "text", "required": true },
+        { "key": "job_description", "label": "Job description", "type": "text", "required": true },
+        { "key": "joining_date", "label": "Joining date", "type": "date", "required": true }
+      ],
+      "footer_group": {
+        "title": "CTC & previous company HR contact",
+        "css_class": "address-box mt-4",
+        "fields": {
+          "current_ctc": {
+            "name": "current_ctc",
+            "label": "Current CTC",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g. 6,00,000",
+            "class": "form-control required-field",
+            "col": "col-md-6 mb-3"
+          },
+          "expected_ctc": {
+            "name": "expected_ctc",
+            "label": "Expected CTC",
+            "type": "text",
+            "required": true,
+            "placeholder": "e.g. 7,50,000",
+            "class": "form-control",
+            "col": "col-md-6 mb-3"
+          },
+          "hr_name": {
+            "name": "hr_name",
+            "label": "HR name (last company)",
+            "type": "text",
+            "required": true,
+            "class": "form-control required-field",
+            "col": "col-md-4 mb-3"
+          },
+          "hr_email": {
+            "name": "hr_email",
+            "label": "HR email",
+            "type": "email",
+            "required": true,
+            "class": "form-control required-field",
+            "col": "col-md-4 mb-3"
+          },
+          "hr_mobile_phone": {
+            "type": "phone",
+            "label": "HR phone",
+            "required": true,
+            "col": "col-md-4 mb-3",
+            "code_name": "hr_phone_country_code",
+            "number_name": "hr_phone",
+            "code_default": "+91",
+            "number_placeholder": "HR mobile"
+          }
+        }
+      },
+      "relatives_group": {
+        "title": "Relatives in rubber / pharmaceutical / biotech industry",
+        "intro": "Please specify the names of your relative working in any rubber Company, Pharmaceutical Company, Biotech Company and Pharmaceutical Machinery manufacturing company.",
+        "optional": true,
+        "toggle_field": {
+          "name": "has_industry_relatives",
+          "label": "Do you have any relative working in rubber / pharmaceutical / biotech / pharma machinery industry?",
+          "type": "select",
+          "required": true,
+          "class": "form-select required-field",
+          "col": "col-12 mb-3",
+          "options": ["", "no", "yes"]
+        },
+        "columns": [
+          { "key": "name", "label": "Name", "type": "text", "required": true },
+          { "key": "relation", "label": "Relation", "type": "text", "required": true },
+          { "key": "company_name", "label": "Company Name", "type": "text", "required": true },
+          { "key": "designation", "label": "Designation", "type": "text", "required": true }
+        ]
+      }
+    },
+    {
+      "key": "declaration",
+      "title": "6. Declaration",
+      "type": "declaration_step",
+      "declaration_text": "I declare that the information given on all parts of this application form, and in CV which accompanies it, is to the best of my knowledge, correct. I understand that giving false information will make my application unacceptable and in future if any of the information specified in the application form and CV found to be false, the company can take the required action against me.\n\nI acknowledge that providing false information may render my application invalid. Furthermore, if any information provided in the application form or CV is found to be false in the future, the company reserves the right to take appropriate action. The company is authorized to conduct background verification on all information provided.\n\nI understand that verification with my previous employer will be carried out only for the employment period declared in this form (joining date as entered by me; last working date as confirmed by HR).",
+      "fields": {
+        "consent_correct": {
+          "name": "consent_correct",
+          "label": "I confirm that all details provided in this application are correct and I agree to the declaration above.",
+          "type": "checkbox",
+          "required": true,
+          "class": "form-check-input required-checkbox"
+        },
+        "declaration_date": {
+          "name": "declaration_date",
+          "label": "Date",
+          "type": "date",
+          "required": true,
+          "readonly": true,
+          "class": "form-control required-field",
+          "col": "col-md-6 mb-3"
+        }
+      }
+    }
+  ]
+}

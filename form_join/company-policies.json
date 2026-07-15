@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "documents": [
+    {
+      "key": "posh_declaration",
+      "title": "POSH Declaration",
+      "description": "Prevention of Sexual Harassment at workplace — please read carefully.",
+      "file": "/public/storage/onboarding-policy/POSH_Declaration.pdf",
+      "require_accept": true
+    },
+    {
+      "key": "it_policy",
+      "title": "IT Policy (Updated 12.12.2024-25)",
+      "description": "IT systems, data security, passwords, and acceptable use.",
+      "file": "/public/storage/onboarding-policy/IT-Policy.pdf",
+      "require_accept": true
+    },
+    {
+      "key": "guesthouse_policy",
+      "title": "Guest House Policy",
+      "description": "Rules and guidelines for company guest house accommodation.",
+      "file": "/public/storage/onboarding-policy/GUESTHOUSE-POLICY.pdf",
+      "require_accept": false
+    }
+  ]
+}

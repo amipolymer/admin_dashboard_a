@@ -1,0 +1,145 @@
+# HRMS Enhancement Requirements
+
+Please implement the following changes in the Offer Letter and Appointment Letter modules.
+
+## 1. Title Prefix Based on Gender & Marital Status
+
+Display the appropriate title prefix in both the Offer Letter and Appointment Letter based on employee gender and marital status.
+
+### Rules:
+
+* Male → **Mr.**
+* Female + Unmarried → **Ms.**
+* Female + Married → **Mrs.**
+
+The selected title should automatically appear before the employee name in all relevant sections and generated documents (HTML preview and PDF).
+
+---
+
+## 2. Offer Letter Template Improvements
+
+### Document Structure
+
+* Keep the existing **Header**, **Footer**, and **Watermark** unchanged.
+* Only the **body content area** should be editable and configurable.
+
+### HTML Preview
+
+* The preview page should be view-only.
+* Users must not be able to:
+
+  * Edit content
+  * Use Inspect/Edit mode for modifications
+  * Modify document structure
+
+### Access Control
+
+* Only authorized HR/Admin users can create, edit, or update Offer Letter templates.
+
+### CSS Requirements
+
+Create separate styling for:
+
+1. HTML Preview View
+2. PDF Generation View
+
+Both versions should maintain consistent formatting.
+
+---
+
+## 3. Appointment Letter Template Improvements
+
+Apply the same rules used in the Offer Letter module.
+
+### Requirements
+
+* Keep existing Header, Footer, and Watermark unchanged.
+* Allow modifications only in the body content section.
+* Support multi-page Appointment Letters.
+
+### Multi-Page Handling
+
+* Header must appear on every page.
+* Footer must appear on every page.
+* Watermark must appear on every page.
+
+### CSS Requirements
+
+Create separate CSS files/configurations for:
+
+1. HTML Preview
+2. PDF Generation
+
+Ensure layout consistency across all pages.
+
+---
+
+## 4. Compensation Structure Enhancement
+
+Add two new compensation fields immediately after the existing **CTC** field:
+
+1. **Retention Bonus**
+2. **Variable Component**
+
+### HR Configuration
+
+* HR/Admin should be able to enter these values while creating an Offer Letter.
+* Values should be stored and displayed in:
+
+  * Offer Letter
+  * Appointment Letter (if applicable)
+  * Employee compensation details
+
+---
+
+## 5. New Join Employee Form Enhancements
+
+### Rename Field
+
+* Rename the existing field label:
+
+  * Current: **Role**
+  * New: **Designation**
+
+### Add New Field: Level Wise Grading
+
+Add a new dropdown field named **Level Wise Grading** in the New Join Employee section.
+
+### Data Source
+
+* The dropdown values should be loaded dynamically from the existing **"Level-wise-grading"** configuration file.
+* No hardcoded values should be maintained in the application.
+* The system should read and populate the grading data directly from the configuration file.
+
+### Field Behavior
+
+* HR/Admin should first select the **Level Wise Grading**.
+* Based on the selected grading level, the corresponding **Designation** options should be populated automatically.
+* The related **Category** should also be fetched from the grading configuration and stored with the employee record.
+
+### Validation
+
+* Level Wise Grading is mandatory for new employee creation.
+* Designation selection should be restricted to the designations available under the selected grading level.
+
+### Expected Outcome
+
+* Centralized management of grading data through the existing "Level-wise-grading" file.
+* Easy maintenance without code changes when grading structures are updated.
+* Consistent usage of Grade, Designation, and Category across Offer Letters, Appointment Letters, Employee Master, and Reports.
+
+
+---
+
+## Deliverables
+
+1. Offer Letter HTML Preview CSS
+2. Offer Letter PDF CSS
+3. Appointment Letter HTML Preview CSS
+4. Appointment Letter PDF CSS
+5. Gender/Marital Status based title logic
+6. Retention Bonus field
+7. Variable Component field
+8. Designation field (renamed from Role)
+9. Level Wise Grading dropdown with JSON-based configuration
+10. HR/Admin-only edit permissions for document templates

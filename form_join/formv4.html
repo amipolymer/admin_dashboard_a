@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Onboarding Form</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body { background:#f4f6f9; }
+.card { border-radius:14px; }
+.section-title { font-weight:700; color:#0d6efd; }
+.address-box { background:#fff; border:1px solid #dee2e6; padding:20px; border-radius:10px; }
+.form-step { animation:fade .2s ease; }
+@keyframes fade { from{opacity:0;transform:translateY(10px)} to{opacity:1;transform:translateY(0)} }
+</style>
+
+</head>
+
+<body>
+
+<div class="container py-4">
+
+<div class="card shadow">
+
+<div class="card-body p-4">
+
+<h3 class="text-center fw-bold">Employee Joining Form</h3>
+
+<div class="progress my-3">
+<div class="progress-bar" id="progressBar"></div>
+</div>
+
+<form id="mainForm">
+
+<!-- STEP 1 -->
+<div class="form-step">
+
+<h4 class="section-title">1. Basic Information</h4>
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+<label>Name *</label>
+<input class="form-control required-field" name="name">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Father Name *</label>
+<input class="form-control required-field" name="fathersName">
+</div>
+
+<div class="col-md-4 mb-3">
+<label>Profession *</label>
+<input class="form-control required-field" name="professionId">
+</div>
+
+<div class="col-md-4 mb-3">
+<label>Other Profession</label>
+<input class="form-control" name="otherProfession">
+</div>
+
+<div class="col-md-4 mb-3">
+<label>City *</label>
+<input class="form-control required-field" name="city">
+</div>
+
+<div class="col-md-3 mb-3">
+<label>Phone Code *</label>
+<input class="form-control required-field" name="phoneCountryCode" value="+91">
+</div>
+
+<div class="col-md-3 mb-3">
+<label>Phone *</label>
+<input class="form-control required-field" name="phone">
+</div>
+
+<div class="col-md-3 mb-3">
+<label>Alt Code</label>
+<input class="form-control" name="alternatePhoneCountryCode">
+</div>
+
+<div class="col-md-3 mb-3">
+<label>Alt Phone</label>
+<input class="form-control" name="alternatePhone">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>Email</label>
+<input class="form-control" name="email">
+</div>
+
+<div class="col-md-6 mb-3">
+<label>DOB *</label>
+<input type="date" class="form-control required-field" name="dob">
+</div>
+
+</div>
+</div>
+
+<!-- STEP 2 ADDRESS -->
+<div class="form-step d-none">
+
+<h4 class="section-title">2. Address</h4>
+
+<div class="form-check mb-3">
+<input type="checkbox" id="sameAddr" class="form-check-input">
+<label>Same as Current Address</label>
+</div>
+
+<div class="row address-box mb-3">
+
+<h5>Current Address</h5>
+
+<div class="col-md-6">
+<input id="c1" class="form-control mb-2" placeholder="Line 1">
+</div>
+<div class="col-md-6">
+<input id="c2" class="form-control mb-2" placeholder="Line 2">
+</div>
+<div class="col-md-4">
+<input id="cCity" class="form-control mb-2" placeholder="City">
+</div>
+<div class="col-md-4">
+<input id="cState" class="form-control mb-2" placeholder="State">
+</div>
+<div class="col-md-4">
+<input id="cPin" class="form-control mb-2" placeholder="Pin">
+</div>
+
+</div>
+
+<div class="row address-box">
+
+<h5>Permanent Address</h5>
+
+<div class="col-md-6">
+<input id="p1" class="form-control mb-2" placeholder="Line 1">
+</div>
+<div class="col-md-6">
+<input id="p2" class="form-control mb-2" placeholder="Line 2">
+</div>
+<div class="col-md-4">
+<input id="pCity" class="form-control mb-2" placeholder="City">
+</div>
+<div class="col-md-4">
+<input id="pState" class="form-control mb-2" placeholder="State">
+</div>
+<div class="col-md-4">
+<input id="pPin" class="form-control mb-2" placeholder="Pin">
+</div>
+
+</div>
+
+</div>
+
+<!-- STEP 3 FAMILY -->
+<div class="form-step d-none">
+<h4 class="section-title">3. Family Details</h4>
+
+<table class="table">
+<thead>
+<tr><th>Name</th><th>Relation</th><th>DOB</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><input class="form-control"></td>
+<td><input class="form-control"></td>
+<td><input type="date" class="form-control"></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- STEP 4 EMPLOYMENT -->
+<div class="form-step d-none">
+<h4 class="section-title">4. Previous Employment</h4>
+
+<input class="form-control mb-2" placeholder="Current CTC">
+<input class="form-control mb-2" placeholder="Expected CTC">
+<input class="form-control mb-2" placeholder="Notice Period">
+
+<table class="table">
+<tr><th>Company</th><th>Role</th></tr>
+<tr>
+<td><input class="form-control"></td>
+<td><input class="form-control"></td>
+</tr>
+</table>
+</div>
+
+<!-- STEP 5 JOINING -->
+<div class="form-step d-none">
+
+<h4 class="section-title">5. Joining Report</h4>
+
+<input class="form-control mb-2" placeholder="Employee ID">
+<input class="form-control mb-2" placeholder="Joining Date">
+<input class="form-control mb-2" placeholder="Department">
+<input class="form-control mb-2" placeholder="Designation">
+<input class="form-control mb-2" placeholder="Reporting Manager">
+<input class="form-control mb-2" placeholder="Work Location">
+
+</div>
+
+<!-- STEP 6 ASSETS -->
+<div class="form-step d-none">
+
+<h4 class="section-title">6. Asset Allocation</h4>
+
+<input class="form-control mb-2" placeholder="Laptop">
+<input class="form-control mb-2" placeholder="Mouse">
+<input class="form-control mb-2" placeholder="Keyboard">
+<input class="form-control mb-2" placeholder="ID Card">
+
+</div>
+
+<!-- STEP 7 DECLARATION -->
+<div class="form-step d-none">
+
+<h4 class="section-title">7. Declaration & Policies</h4>
+
+<div class="card p-3 mb-3">
+<p><b>Company Policies</b></p>
+<a href="#">View Terms</a> |
+<a href="#">HR Policy</a> |
+<a href="#">IT Policy</a>
+</div>
+
+<div class="form-check">
+<input class="form-check-input required-checkbox" type="checkbox">
+<label>I agree to Terms</label>
+</div>
+
+<div class="form-check">
+<input class="form-check-input required-checkbox" type="checkbox">
+<label>I accept Policies</label>
+</div>
+
+<textarea class="form-control mt-3" readonly>
+I hereby declare all information is true...
+</textarea>
+
+<input type="hidden" name="consentText" value="I hereby declare all information is true">
+<input type="hidden" name="hasConsent" value="true">
+
+</div>
+
+<!-- BUTTONS -->
+<div class="d-flex justify-content-between mt-4">
+
+<button type="button" class="btn btn-secondary" id="prevBtn">Back</button>
+<button type="button" class="btn btn-primary" id="nextBtn">Next</button>
+
+</div>
+
+</form>
+
+</div>
+</div>
+</div>
+
+<script>
+
+let steps = document.querySelectorAll('.form-step');
+let current = parseInt(new URLSearchParams(location.search).get('step')) - 1 || 0;
+
+function showStep(i){
+steps.forEach((s,idx)=>s.classList.toggle('d-none', idx!==i));
+history.replaceState(null,null,'?step='+(i+1));
+document.getElementById('progressBar').style.width = ((i+1)/steps.length)*100+'%';
+}
+
+function validate(){
+let valid=true;
+steps[current].querySelectorAll('.required-field').forEach(i=>{
+if(!i.value) valid=false;
+});
+steps[current].querySelectorAll('.required-checkbox').forEach(i=>{
+if(!i.checked) valid=false;
+});
+return valid;
+}
+
+document.getElementById('nextBtn').onclick=()=>{
+if(!validate()) return alert("Fill required fields");
+if(current<steps.length-1){ current++; showStep(current); }
+else alert("Submit API here");
+};
+
+document.getElementById('prevBtn').onclick=()=>{
+if(current>0){ current--; showStep(current); }
+};
+
+showStep(current);
+
+// COPY ADDRESS
+document.getElementById('sameAddr').onchange=()=>{
+if(document.getElementById('sameAddr').checked){
+['c1','c2','cCity','cState','cPin'].forEach((id,i)=>{
+document.getElementById(['p1','p2','pCity','pState','pPin'][i]).value =
+document.getElementById(id).value;
+});
+}
+};
+
+</script>
+
+</body>
+</html>

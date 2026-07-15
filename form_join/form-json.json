@@ -1,0 +1,253 @@
+{
+  "formTitle": "Employee Onboarding Form",
+  "sections": [
+    {
+      "sectionName": "Basic Information",
+      "fields": [
+        {
+          "type": "text",
+          "name": "name",
+          "label": "Full Name",
+          "placeholder": "Enter full name as per Aadhaar",
+          "required": true,
+          "validation": {
+            "minLength": 2,
+            "maxLength": 100
+          }
+        },
+        {
+          "type": "text",
+          "name": "professionId",
+          "label": "Profession",
+          "placeholder": "Enter profession",
+          "required": true,
+          "validation": {}
+        },
+        {
+          "type": "text",
+          "name": "otherProfession",
+          "label": "Other Profession",
+          "placeholder": "If any other profession",
+          "required": false
+        },
+        {
+          "type": "text",
+          "name": "city",
+          "label": "City",
+          "placeholder": "Enter city",
+          "required": true
+        },
+        {
+          "type": "select",
+          "name": "gender",
+          "label": "Gender",
+          "placeholder": "Select gender",
+          "required": true,
+          "options": ["Male", "Female", "Other"]
+        },
+        {
+          "type": "text",
+          "name": "phoneCountryCode",
+          "label": "Country Code",
+          "placeholder": "+91",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "phone",
+          "label": "Mobile Number",
+          "placeholder": "Enter mobile number",
+          "required": true,
+          "validation": {
+            "pattern": "^[0-9]{10}$"
+          }
+        },
+        {
+          "type": "text",
+          "name": "alternatePhoneCountryCode",
+          "label": "Alternate Country Code",
+          "placeholder": "+91",
+          "required": false
+        },
+        {
+          "type": "text",
+          "name": "alternatePhone",
+          "label": "Alternate Mobile",
+          "placeholder": "Enter alternate mobile",
+          "required": false
+        },
+        {
+          "type": "email",
+          "name": "email",
+          "label": "Email",
+          "placeholder": "Enter email",
+          "required": false
+        },
+        {
+          "type": "date",
+          "name": "dob",
+          "label": "Date of Birth",
+          "placeholder": "Select DOB",
+          "required": true
+        }
+      ]
+    },
+
+    {
+      "sectionName": "Address Information",
+      "fields": [
+        {
+          "type": "text",
+          "name": "currentAddress.line1",
+          "label": "Current Address Line 1",
+          "placeholder": "Address line 1",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "currentAddress.line2",
+          "label": "Current Address Line 2",
+          "placeholder": "Address line 2",
+          "required": false
+        },
+        {
+          "type": "text",
+          "name": "currentAddress.city",
+          "label": "City",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "currentAddress.state",
+          "label": "State",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "currentAddress.pincode",
+          "label": "Pincode",
+          "required": true
+        },
+
+        {
+          "type": "checkbox",
+          "name": "sameAsCurrent",
+          "label": "Same as Current Address",
+          "required": false
+        },
+
+        {
+          "type": "text",
+          "name": "permanentAddress.line1",
+          "label": "Permanent Address Line 1",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "permanentAddress.city",
+          "label": "City",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "permanentAddress.state",
+          "label": "State",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "permanentAddress.pincode",
+          "label": "Pincode",
+          "required": true
+        }
+      ]
+    },
+
+    {
+      "sectionName": "Family Details",
+      "fields": [
+        {
+          "type": "table",
+          "name": "family",
+          "label": "Family Members",
+          "columns": [
+            {
+              "name": "relation",
+              "type": "text",
+              "label": "Relation"
+            },
+            {
+              "name": "name",
+              "type": "text",
+              "label": "Name"
+            },
+            {
+              "name": "dob",
+              "type": "date",
+              "label": "DOB"
+            },
+            {
+              "name": "occupation",
+              "type": "text",
+              "label": "Occupation"
+            }
+          ],
+          "required": false
+        }
+      ]
+    },
+
+    {
+      "sectionName": "Employment Details",
+      "fields": [
+        {
+          "type": "text",
+          "name": "currentCTC",
+          "label": "Current CTC",
+          "placeholder": "Enter current CTC",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "expectedCTC",
+          "label": "Expected CTC",
+          "placeholder": "Enter expected CTC",
+          "required": true
+        },
+        {
+          "type": "text",
+          "name": "noticePeriod",
+          "label": "Notice Period",
+          "placeholder": "Enter notice period",
+          "required": true
+        }
+      ]
+    },
+
+    {
+      "sectionName": "Declaration",
+      "fields": [
+        {
+          "type": "checkbox",
+          "name": "hasConsent",
+          "label": "I agree to company policies",
+          "required": true
+        },
+        {
+          "type": "textarea",
+          "name": "consentText",
+          "label": "Consent Text",
+          "required": true,
+          "readonly": true,
+          "value": "i give consent"
+        },
+        {
+          "type": "file",
+          "name": "signature",
+          "label": "Signature Upload",
+          "required": true
+        }
+      ]
+    }
+  ]
+}

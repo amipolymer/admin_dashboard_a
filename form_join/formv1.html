@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Employee Joining Form</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+<div class="container py-5">
+
+    <div class="card shadow">
+
+        <div class="card-body p-4">
+
+            <h2 class="text-center mb-4">
+                Employee Joining Form
+            </h2>
+
+            <!-- Progress -->
+
+            <div class="progress mb-4" style="height:10px;">
+
+                <div class="progress-bar" id="progressBar" style="width:10%"></div>
+
+            </div>
+
+            <form id="mainForm">
+
+                <!-- ================================================= -->
+                <!-- STEP 1 -->
+                <!-- ================================================= -->
+
+                <div class="form-step">
+
+                    <h4 class="mb-4">1. Basic Information</h4>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Post Applied For *</label>
+                            <input type="text" class="form-control required-field">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Passport Photo *</label>
+                            <input type="file" class="form-control required-field">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Application Through *</label>
+
+                            <select class="form-select required-field">
+
+                                <option value="">Select</option>
+
+                                <option>HR</option>
+                                <option>Social Media</option>
+                                <option>Reference</option>
+                                <option>Walk In</option>
+                                <option>Consultant</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Source Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" class="form-control required-field text-uppercase">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Father Name *</label>
+                            <input type="text" class="form-control required-field text-uppercase">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Mobile Number *</label>
+                            <input type="text" class="form-control required-field">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Email *</label>
+                            <input type="email" class="form-control required-field">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Blood Group</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Date of Birth *</label>
+                            <input type="date" class="form-control required-field">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nationality</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Religion</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Gender *</label>
+
+                            <select class="form-select required-field">
+
+                                <option value="">Select</option>
+
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Marital Status *</label>
+
+                            <select class="form-select required-field">
+
+                                <option value="">Select</option>
+
+                                <option>Unmarried</option>
+                                <option>Married</option>
+                                <option>Widow</option>
+                                <option>Widower</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label">Present Address *</label>
+                            <textarea class="form-control required-field"></textarea>
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label">Permanent Address *</label>
+                            <textarea class="form-control required-field"></textarea>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Emergency Contact Name *</label>
+                            <input type="text" class="form-control required-field">
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Relation *</label>
+                            <input type="text" class="form-control required-field">
+                        </div>
+
+                        <div class="col-md-3 mb-3">
+                            <label class="form-label">Emergency Number *</label>
+                            <input type="text" class="form-control required-field">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Differently Abled?</label>
+
+                            <select class="form-select">
+
+                                <option>No</option>
+                                <option>Yes</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Overall Health</label>
+
+                            <select class="form-select">
+
+                                <option>Excellent</option>
+                                <option>Good</option>
+                                <option>Average</option>
+                                <option>Poor</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-12 mb-3">
+                            <label class="form-label">Medical History</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================================= -->
+                <!-- STEP 2 -->
+                <!-- ================================================= -->
+
+                <div class="form-step d-none">
+
+                    <div class="d-flex justify-content-between mb-3">
+
+                        <h4>2. Education Qualification</h4>
+
+                        <button type="button" class="btn btn-success btn-sm" onclick="addEducationRow()">
+                            + Add
+                        </button>
+
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered" id="educationTable">
+
+                            <thead class="table-light">
+
+                                <tr>
+
+                                    <th>Sr.</th>
+                                    <th>Degree</th>
+                                    <th>University</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>%/Grade</th>
+                                    <th>Specialization</th>
+                                    <th>Action</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>1</td>
+
+                                    <td><input class="form-control required-field"></td>
+
+                                    <td><input class="form-control required-field"></td>
+
+                                    <td><input type="date" class="form-control required-field"></td>
+
+                                    <td><input type="date" class="form-control required-field"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">
+                                            Remove
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================================= -->
+                <!-- STEP 3 -->
+                <!-- ================================================= -->
+
+                <div class="form-step d-none">
+
+                    <div class="d-flex justify-content-between mb-3">
+
+                        <h4>3. Family Details</h4>
+
+                        <button type="button" class="btn btn-success btn-sm" onclick="addFamilyRow()">
+                            + Add
+                        </button>
+
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered" id="familyTable">
+
+                            <thead class="table-light">
+
+                                <tr>
+
+                                    <th>Sr.</th>
+                                    <th>Relation</th>
+                                    <th>Name</th>
+                                    <th>DOB</th>
+                                    <th>Age</th>
+                                    <th>Occupation</th>
+                                    <th>Action</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>1</td>
+
+                                    <td><input class="form-control required-field"></td>
+
+                                    <td><input class="form-control required-field"></td>
+
+                                    <td><input type="date" class="form-control"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">
+                                            Remove
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================================= -->
+                <!-- STEP 4 -->
+                <!-- ================================================= -->
+
+                <div class="form-step d-none">
+
+                    <div class="d-flex justify-content-between mb-3">
+
+                        <h4>4. Previous Employment</h4>
+
+                        <button type="button" class="btn btn-success btn-sm" onclick="addEmploymentRow()">
+                            + Add
+                        </button>
+
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered" id="employmentTable">
+
+                            <thead class="table-light">
+
+                                <tr>
+
+                                    <th>Sr.</th>
+                                    <th>Company</th>
+                                    <th>Designation</th>
+                                    <th>Joining</th>
+                                    <th>Last Working</th>
+                                    <th>Annual CTC</th>
+                                    <th>Monthly Gross</th>
+                                    <th>Net In Hand</th>
+                                    <th>Reason</th>
+                                    <th>Action</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>1</td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td><input type="date" class="form-control"></td>
+
+                                    <td><input type="date" class="form-control"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">
+                                            Remove
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================================= -->
+                <!-- STEP 5 -->
+                <!-- ================================================= -->
+
+                <div class="form-step d-none">
+
+                    <h4 class="mb-4">5. Joining Report</h4>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Joining Date *</label>
+                            <input type="date" class="form-control required-field">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Department *</label>
+                            <input type="text" class="form-control required-field">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Employee Code</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Designation</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Aadhaar Number</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">PAN Number</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">UAN Number</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Bank Account Number</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">IFSC Code</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================================= -->
+                <!-- STEP 6 -->
+                <!-- ================================================= -->
+
+                <div class="form-step d-none">
+
+                    <div class="d-flex justify-content-between mb-3">
+
+                        <h4>6. Asset Allocation</h4>
+
+                        <button type="button" class="btn btn-success btn-sm" onclick="addAssetRow()">
+                            + Add
+                        </button>
+
+                    </div>
+
+                    <div class="table-responsive">
+
+                        <table class="table table-bordered" id="assetTable">
+
+                            <thead class="table-light">
+
+                                <tr>
+
+                                    <th>Sr.</th>
+                                    <th>Particulars</th>
+                                    <th>Qty</th>
+                                    <th>Remarks</th>
+                                    <th>Action</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td>1</td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td><input class="form-control"></td>
+
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">
+                                            Remove
+                                        </button>
+                                    </td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+                <!-- ================================================= -->
+                <!-- STEP 7 -->
+                <!-- ================================================= -->
+
+                <!-- <div class="form-step d-none">
+
+                    <h4 class="mb-4">7. Declaration</h4>
+
+                    <div class="mb-3">
+
+                        <textarea class="form-control" rows="8">
+I hereby declare that the information provided by me is true and correct to the best of my knowledge and belief.
+                        </textarea>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Date</label>
+                            <input type="date" class="form-control">
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Signature</label>
+                            <input type="file" class="form-control">
+                        </div>
+
+                    </div>
+
+                </div> -->
+
+
+                <!-- ================================================= -->
+<!-- STEP 7 -->
+<!-- ================================================= -->
+
+<div class="form-step d-none">
+
+    <h4 class="mb-4">7. Declaration & Policies</h4>
+
+    <!-- DOCUMENT LIST -->
+
+    <div class="card mb-4">
+
+        <div class="card-header">
+            Company Documents / Policies
+        </div>
+
+        <div class="card-body">
+
+            <div class="list-group">
+
+                <!-- PDF 1 -->
+                <div class="list-group-item">
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                        <div>
+                            <h6 class="mb-1">
+                                Employee Terms & Conditions
+                            </h6>
+
+                            <small class="text-muted">
+                                Please read company employment terms.
+                            </small>
+                        </div>
+
+                        <a href="pdf/terms-and-condition.pdf"
+                           target="_blank"
+                           class="btn btn-outline-primary btn-sm">
+                            View PDF
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- PDF 2 -->
+                <div class="list-group-item">
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                        <div>
+                            <h6 class="mb-1">
+                                HR Policy Document
+                            </h6>
+
+                            <small class="text-muted">
+                                Read HR rules and regulations.
+                            </small>
+                        </div>
+
+                        <a href="pdf/hr-policy.pdf"
+                           target="_blank"
+                           class="btn btn-outline-primary btn-sm">
+                            View PDF
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- PDF 3 -->
+                <div class="list-group-item">
+
+                    <div class="d-flex justify-content-between align-items-center flex-wrap">
+
+                        <div>
+                            <h6 class="mb-1">
+                                IT & Asset Usage Policy
+                            </h6>
+
+                            <small class="text-muted">
+                                Read IT security and asset policy.
+                            </small>
+                        </div>
+
+                        <a href="pdf/asset-policy.pdf"
+                           target="_blank"
+                           class="btn btn-outline-primary btn-sm">
+                            View PDF
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ACCEPTANCE -->
+
+    <div class="card mb-4">
+
+        <div class="card-body">
+
+            <div class="form-check mb-3">
+
+                <input class="form-check-input required-checkbox"
+                       type="checkbox"
+                       id="policyCheck1">
+
+                <label class="form-check-label" for="policyCheck1">
+
+                    I have read and understood the
+                    Terms & Conditions document.
+
+                </label>
+
+            </div>
+
+            <div class="form-check mb-3">
+
+                <input class="form-check-input required-checkbox"
+                       type="checkbox"
+                       id="policyCheck2">
+
+                <label class="form-check-label" for="policyCheck2">
+
+                    I agree with the HR Policies and company rules.
+
+                </label>
+
+            </div>
+
+            <div class="form-check mb-3">
+
+                <input class="form-check-input required-checkbox"
+                       type="checkbox"
+                       id="policyCheck3">
+
+                <label class="form-check-label" for="policyCheck3">
+
+                    I accept the IT & Asset Usage Policy.
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- DECLARATION -->
+
+    <div class="card">
+
+        <div class="card-body">
+
+            <h5 class="mb-3">
+                Employee Declaration
+            </h5>
+
+            <textarea class="form-control mb-4"
+                      rows="6"
+                      readonly>I hereby declare that the information provided by me is true and correct to the best of my knowledge and belief. I agree to follow all company rules, policies, confidentiality terms and official procedures during my employment.</textarea>
+
+            <div class="row">
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+                        Date
+                    </label>
+
+                    <input type="date" class="form-control">
+
+                </div>
+
+                <div class="col-md-6 mb-3">
+
+                    <label class="form-label">
+                        Employee Signature
+                    </label>
+
+                    <input type="file" class="form-control">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+                
+                <!-- ================================================= -->
+                <!-- BUTTON -->
+                <!-- ================================================= -->
+
+                <div class="d-flex justify-content-between mt-4">
+
+                    <button type="button" class="btn btn-secondary" id="prevBtn">
+                        Back
+                    </button>
+
+                    <button type="button" class="btn btn-primary" id="nextBtn">
+                        Next
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    let currentStep = 0;
+
+    const steps = document.querySelectorAll(".form-step");
+
+    const nextBtn = document.getElementById("nextBtn");
+
+    const prevBtn = document.getElementById("prevBtn");
+
+    const progressBar = document.getElementById("progressBar");
+
+    function showStep(step) {
+
+        steps.forEach((el, index) => {
+
+            el.classList.toggle("d-none", index !== step);
+
+        });
+
+        prevBtn.style.display = step === 0 ? "none" : "inline-block";
+
+        nextBtn.innerText = step === steps.length - 1 ? "Submit" : "Next";
+
+        progressBar.style.width = ((step + 1) / steps.length) * 100 + "%";
+
+    }
+
+    // function validateStep() {
+
+    //     let valid = true;
+
+    //     const currentFields = steps[currentStep].querySelectorAll(".required-field");
+
+    //     currentFields.forEach(field => {
+
+    //         if (field.value.trim() === "") {
+
+    //             field.classList.add("is-invalid");
+
+    //             valid = false;
+
+    //         } else {
+
+    //             field.classList.remove("is-invalid");
+
+    //         }
+
+    //     });
+
+    //     return valid;
+
+    // }
+
+
+
+    function validateStep() {
+
+    let valid = true;
+
+    // Required Fields
+    const currentFields =
+        steps[currentStep].querySelectorAll(".required-field");
+
+    currentFields.forEach(field => {
+
+        if (field.value.trim() === "") {
+
+            field.classList.add("is-invalid");
+
+            valid = false;
+
+        } else {
+
+            field.classList.remove("is-invalid");
+
+        }
+
+    });
+
+    // Required Checkbox
+    const checkboxes =
+        steps[currentStep].querySelectorAll(".required-checkbox");
+
+    checkboxes.forEach(box => {
+
+        if (!box.checked) {
+
+            box.classList.add("is-invalid");
+
+            valid = false;
+
+        } else {
+
+            box.classList.remove("is-invalid");
+
+        }
+
+    });
+
+    return valid;
+}
+
+    nextBtn.addEventListener("click", () => {
+
+        if (!validateStep()) {
+
+            alert("Please fill all required fields.");
+
+            return;
+
+        }
+
+        if (currentStep < steps.length - 1) {
+
+            currentStep++;
+
+            showStep(currentStep);
+
+        } else {
+
+            alert("Form Submitted Successfully");
+
+            document.getElementById("mainForm").submit();
+
+        }
+
+    });
+
+    prevBtn.addEventListener("click", () => {
+
+        if (currentStep > 0) {
+
+            currentStep--;
+
+            showStep(currentStep);
+
+        }
+
+    });
+
+    showStep(currentStep);
+
+    // ==========================================
+    // REMOVE ROW
+    // ==========================================
+
+    function removeRow(button) {
+
+        button.closest("tr").remove();
+
+        updateSerialNumbers();
+
+    }
+
+    // ==========================================
+    // UPDATE SERIAL
+    // ==========================================
+
+    function updateSerialNumbers() {
+
+        const tables = [
+
+            'educationTable',
+            'familyTable',
+            'employmentTable',
+            'assetTable'
+
+        ];
+
+        tables.forEach(tableId => {
+
+            const rows = document.querySelectorAll(`#${tableId} tbody tr`);
+
+            rows.forEach((row, index) => {
+
+                row.cells[0].innerText = index + 1;
+
+            });
+
+        });
+
+    }
+
+    // ==========================================
+    // EDUCATION
+    // ==========================================
+
+    function addEducationRow() {
+
+        const tbody = document.querySelector("#educationTable tbody");
+
+        const rowCount = tbody.rows.length + 1;
+
+        tbody.innerHTML += `
+            <tr>
+                <td>${rowCount}</td>
+                <td><input class="form-control required-field"></td>
+                <td><input class="form-control required-field"></td>
+                <td><input type="date" class="form-control required-field"></td>
+                <td><input type="date" class="form-control required-field"></td>
+                <td><input class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+        `;
+    }
+
+    // ==========================================
+    // FAMILY
+    // ==========================================
+
+    function addFamilyRow() {
+
+        const tbody = document.querySelector("#familyTable tbody");
+
+        const rowCount = tbody.rows.length + 1;
+
+        tbody.innerHTML += `
+            <tr>
+                <td>${rowCount}</td>
+                <td><input class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td><input type="date" class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+        `;
+    }
+
+    // ==========================================
+    // EMPLOYMENT
+    // ==========================================
+
+    function addEmploymentRow() {
+
+        const tbody = document.querySelector("#employmentTable tbody");
+
+        const rowCount = tbody.rows.length + 1;
+
+        tbody.innerHTML += `
+            <tr>
+                <td>${rowCount}</td>
+                <td><input class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td><input type="date" class="form-control"></td>
+                <td><input type="date" class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+        `;
+    }
+
+    // ==========================================
+    // ASSET
+    // ==========================================
+
+    function addAssetRow() {
+
+        const tbody = document.querySelector("#assetTable tbody");
+
+        const rowCount = tbody.rows.length + 1;
+
+        tbody.innerHTML += `
+            <tr>
+                <td>${rowCount}</td>
+                <td><input class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td><input class="form-control"></td>
+                <td>
+                    <button type="button" class="btn btn-danger btn-sm" onclick="removeRow(this)">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+        `;
+    }
+
+</script>
+
+</body>
+</html>

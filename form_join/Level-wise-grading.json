@@ -1,0 +1,129 @@
+[
+  {
+    "grade": "L-10",
+    "category": "Company Staff",
+    "designations": [
+      "CMD and Directors",
+      "CEO / CXOs / C-Suits"
+    ]
+  },
+  {
+    "grade": "L-9",
+    "category": "Company Staff",
+    "designations": [
+      "President",
+      "Executive Vice President"
+    ]
+  },
+  {
+    "grade": "L-8",
+    "category": "Company Staff",
+    "designations": [
+      "Sr. Vice President",
+      "Vice President"
+    ]
+  },
+  {
+    "grade": "L-7",
+    "category": "Company Staff",
+    "designations": [
+      "Associate Vice President",
+      "Sr. General Manager"
+    ]
+  },
+  {
+    "grade": "L-6",
+    "category": "Company Staff",
+    "designations": [
+      "General Manager",
+      "Dy. General Manager"
+    ]
+  },
+  {
+    "grade": "L-5",
+    "category": "Company Staff",
+    "designations": [
+      "Associate General Manager",
+      "Sr. Manager"
+    ]
+  },
+  {
+    "grade": "L-4",
+    "category": "Company Staff",
+    "designations": [
+      "Divisional Manager",
+      "Manager"
+    ]
+  },
+  {
+    "grade": "L-3",
+    "category": "Company Staff",
+    "designations": [
+      "Dy. Manager",
+      "Associate Manager"
+    ]
+  },
+  {
+    "grade": "L-2",
+    "category": "Company Staff",
+    "designations": [
+      "Sr. Engineer",
+      "Sr. Executive",
+      "Engineer",
+      "Executive"
+    ]
+  },
+  {
+    "grade": "L-1",
+    "category": "Company Staff",
+    "designations": [
+      "Jr. Engineer",
+      "Jr. Executive",
+      "Officer"
+    ]
+  },
+  {
+    "grade": "W",
+    "category": "Company Workmen",
+    "designations": [
+      "Sr. Associate (Operator)",
+      "Associate (Operator)",
+      "Other"
+    ]
+  },
+  {
+    "grade": "T-3",
+    "category": "CA / MBA",
+    "designations": [
+      "Management Trainee"
+    ]
+  },
+  {
+    "grade": "T-2",
+    "category": "BE / B. Tech",
+    "designations": [
+      "Graduate Engineer Trainee"
+    ]
+  },
+  {
+    "grade": "T-2",
+    "category": "CIPET",
+    "designations": [
+      "Graduate Engineer Trainee"
+    ]
+  },
+  {
+    "grade": "T-2",
+    "category": "IIT / NIT",
+    "designations": [
+      "Graduate Engineer Trainee"
+    ]
+  },
+  {
+    "grade": "T-1",
+    "category": "Diploma",
+    "designations": [
+      "Diploma Engineer Trainee"
+    ]
+  }
+]

@@ -1,0 +1,244 @@
+{
+  "version": 11,
+  "sections": [
+    {
+      "key": "joining_details",
+      "title": "1. Joining Basic Details",
+      "fields": [
+        { "name": "confirmed_join_date", "label": "Confirmed Join Date", "type": "date", "required": true, "col": "col-md-3 mb-3" },
+        { "name": "reporting_time", "label": "Reporting Time", "type": "text", "required": false, "col": "col-md-3 mb-3", "placeholder": "e.g. 9:30 AM" },
+        { "name": "reporting_manager", "label": "Reporting Manager", "type": "text", "required": false, "col": "col-md-6 mb-3", "placeholder": "Manager name" },
+        {
+          "name": "emp_id",
+          "label": "EMP ID",
+          "type": "text",
+          "required": false,
+          "placeholder": "If HR has assigned your employee ID",
+          "class": "form-control",
+          "col": "col-md-2 mb-3"
+        },
+        { "name": "uniform_size", "label": "Uniform Size", "type": "text", "required": false, "col": "col-md-2 mb-3" },
+        {
+          "name": "shoe_required",
+          "label": "Shoe Required",
+          "type": "select",
+          "required": false,
+          "options": ["", "no", "yes"],
+          "class": "form-select shoe-required-toggle",
+          "col": "col-md-2 mb-3"
+        },
+        {
+          "name": "shoe_size",
+          "label": "Shoe Size",
+          "type": "text",
+          "required": false,
+          "placeholder": "Enter shoe size",
+          "class": "form-control shoe-size-field",
+          "col": "col-md-3 mb-3 shoe-size-wrap"
+        },
+        {
+          "name": "guest_house_required",
+          "label": "Guest House Required",
+          "type": "select",
+          "required": false,
+          "options": ["", "no", "yes"],
+          "class": "form-select guest-house-required-toggle",
+          "col": "col-md-3 mb-3"
+        },
+        {
+          "name": "travel_required",
+          "label": "Company Travel / Pickup Required",
+          "type": "select",
+          "required": false,
+          "options": ["", "no", "yes"],
+          "col": "col-md-3 mb-3"
+        },
+        { "name": "emergency_contact_joining", "label": "Emergency Contact (Joining)", "type": "text", "col": "col-md-3 mb-3" }
+      ]
+    },
+    {
+      "key": "gratuity_nomination",
+      "title": "2. Gratuity Nomination Form",
+      "type": "gratuity_nomination",
+      "intro": "Employee details are filled from your profile. Add one or more nominees in the table, confirm the declaration, then submit joining details.",
+      "employee_group": {
+        "title": "Employee Information",
+        "intro": "Prefilled from your profile and joining details.",
+        "fields": [
+          { "name": "employee_full_name", "label": "Employee Full Name", "type": "text", "readonly": true, "col": "col-md-3 mb-3" },
+          { "name": "gender", "label": "Gender", "type": "text", "readonly": true, "col": "col-md-3 mb-3" },
+          { "name": "religion", "label": "Religion", "type": "text", "readonly": true, "col": "col-md-3 mb-3" },
+          { "name": "marital_status", "label": "Marital Status", "type": "text", "readonly": true, "col": "col-md-3 mb-3" },
+          { "name": "department", "label": "Department", "type": "text", "readonly": true, "col": "col-md-3 mb-3" },
+          { "name": "employee_id", "label": "Employee ID", "type": "text", "readonly": true, "col": "col-md-3 mb-3" },
+          { "name": "date_of_joining", "label": "Date of Joining", "type": "date", "readonly": true, "col": "col-md-3 mb-3" },
+          { "name": "permanent_address", "label": "Permanent Address", "type": "textarea", "readonly": true, "col": "col-12 mb-3", "rows": 2 }
+        ]
+      },
+      "nominee_group": {
+        "title": "Nominee Information",
+        "intro": "Add one or more nominees. Total gratuity share must equal 100%.",
+        "columns": [
+          { "key": "nominee_full_name", "label": "Nominee Full Name", "required": true },
+          { "key": "nominee_relationship", "label": "Relationship with Employee", "required": true },
+          { "key": "nominee_age", "label": "Nominee Age", "type": "number", "required": true },
+          { "key": "nominee_address", "label": "Nominee Address", "type": "text", "required": true, "placeholder": "Full address" },
+          { "key": "gratuity_share_percentage", "label": "Gratuity Share (%)", "type": "number", "required": true }
+        ]
+      },
+      "declaration": {
+        "text": "I hereby nominate the person(s) named below to receive the gratuity amount payable to me under the Payment of Gratuity Act, 1972, in the event of my death. I declare that the information given above is true and correct to the best of my knowledge.",
+        "confirm_field": "gratuity_declaration_confirm",
+        "required": true,
+        "confirm_label": "I confirm the above nomination and agree to the declaration. Submit Nomination"
+      }
+    },
+    {
+      "key": "form_25_leave_nomination",
+      "title": "3. Form No. 25 - Leave Encashment Nomination",
+      "type": "form_25_leave_nomination",
+      "intro": "Fill nominee and witness details for Form No. 25 (leave encashment nomination).",
+      "groups": [
+        {
+          "key": "nomination_meta",
+          "fields": [
+            { "name": "nomination_date", "label": "Nomination Date", "type": "date", "required": true, "col": "col-md-4 mb-3" },
+            { "name": "nomination_place", "label": "Nomination Place", "type": "text", "required": true, "col": "col-md-4 mb-3", "placeholder": "City / location" }
+          ]
+        },
+        {
+          "key": "nominee_details",
+          "title": "Nominee Details",
+          "wrap": "card",
+          "fields": [
+            { "name": "nominee_name", "label": "Nominee Name", "type": "text", "required": true, "col": "col-md-4 mb-3" },
+            { "name": "nominee_relationship", "label": "Relationship", "type": "text", "required": true, "col": "col-md-4 mb-3", "placeholder": "e.g. Spouse, Father" },
+            { "name": "nominee_address", "label": "Address", "type": "text", "required": true, "col": "col-md-4 mb-3", "placeholder": "Full address" }
+          ]
+        },
+        {
+          "key": "witness_details",
+          "title": "Witness Details",
+          "wrap": "card",
+          "rows": [
+            {
+              "fields": [
+                { "name": "witness1_name", "label": "Witness 1 Name", "type": "text", "required": true, "col": "col-md-4 mb-3" },
+                { "name": "witness1_address", "label": "Witness 1 Address", "type": "text", "required": true, "col": "col-md-8 mb-3", "placeholder": "Full address" }
+              ]
+            },
+            {
+              "fields": [
+                { "name": "witness2_name", "label": "Witness 2 Name", "type": "text", "required": true, "col": "col-md-4 mb-3" },
+                { "name": "witness2_address", "label": "Witness 2 Address", "type": "text", "required": true, "col": "col-md-8 mb-3", "placeholder": "Full address" }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "bank_pf",
+      "title": "4. Bank / PF Details",
+      "fields": [
+        { "name": "pf_uan_details", "label": "PF / UAN Details (if have)", "type": "text", "placeholder": "e.g. 1234567890", "col": "col-md-6 mb-3" },
+        {
+          "name": "bank_name",
+          "label": "Bank Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. State Bank of India",
+          "class": "form-control required-field",
+          "col": "col-md-6 mb-3"
+        },
+        {
+          "name": "bank_branch",
+          "label": "Branch Name",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. MG Road Branch",
+          "class": "form-control required-field",
+          "col": "col-md-6 mb-3"
+        },
+        {
+          "name": "bank_account_number",
+          "label": "Bank Account Number",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. 1234567890",
+          "class": "form-control required-field",
+          "col": "col-md-3 mb-3"
+        },
+        {
+          "name": "ifsc_code",
+          "label": "IFSC Code",
+          "type": "text",
+          "required": true,
+          "placeholder": "e.g. SBIN0001234",
+          "class": "form-control text-uppercase required-field",
+          "maxlength": 11,
+          "col": "col-md-3 mb-3"
+        }
+      ]
+    },
+    {
+      "key": "mediclaim_dependents",
+      "title": "5. Mediclaim Members",
+      "type": "repeatable_table",
+      "optional": true,
+      "intro": "Prefilled from your Family Details (spouse and children). You may edit name, date of birth, and relationship. Parents are not covered.",
+      "columns": [
+        { "key": "name", "label": "Name", "required": true },
+        { "key": "dob", "label": "Date of Birth", "type": "date", "required": true },
+        {
+          "key": "relationship",
+          "label": "Relationship",
+          "type": "select",
+          "required": true,
+          "options": ["Spouse", "Son", "Daughter"]
+        }
+      ]
+    },
+    {
+      "key": "medical_fitness",
+      "title": "6. Medical Fitness",
+      "type": "medical_fitness",
+      "intro": "Medical fitness certificate is required. Select Yes to upload PDF, or No and provide a reason (minimum 10 characters).",
+      "document_key": "medical_fitness_certificate",
+      "accept": ".pdf,application/pdf",
+      "fields": [
+        {
+          "name": "medical_fitness_available",
+          "label": "Medical fitness certificate available?",
+          "type": "select",
+          "required": true,
+          "options": ["", "yes", "no"],
+          "class": "form-select medical-fitness-available-toggle required-field",
+          "col": "col-md-6 mb-3"
+        },
+        {
+          "name": "medical_fitness_unavailable_reason",
+          "label": "Reason (if certificate not available)",
+          "type": "textarea",
+          "required": false,
+          "rows": 3,
+          "placeholder": "Minimum 10 characters — explain why the certificate is not available",
+          "class": "form-control medical-fitness-reason-field",
+          "col": "col-12 mb-3 medical-fitness-reason-wrap d-none"
+        }
+      ]
+    },
+    {
+      "key": "assets_requested",
+      "title": "7. Assets Details",
+      "type": "repeatable_table",
+      "optional": true,
+      "intro": "Optional — add laptop, tools, or other assets required.",
+      "columns": [
+        { "key": "particulars", "label": "Particulars", "required": true },
+        { "key": "quantity", "label": "Qty", "type": "number" },
+        { "key": "remarks", "label": "Remarks" }
+      ]
+    }
+  ]
+}
