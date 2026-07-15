@@ -1,0 +1,101 @@
+{
+    "name": "", //Mandatory
+    "professionId": "", //Mandatory
+    "otherProfession": "",
+    "gender": "", //Mandatory
+    "city": "", //Mandatory
+    "phoneCountryCode": "", //Not Mandatory but recommended if available
+    "phone": "", //Mandatory
+    "uid": "", //If UID is populated it will initiate Aadhaar Verification of an individual
+    "email": "", //Not Mandatory but recommended if available
+    "dob": "", //Required
+    "hasConsent": "", //Mandatory
+    "consentText": "", //Mandatory
+    "permanentAddress": { //Required
+        "co": "",
+        "line1": "",
+        "locality": "",
+        "landmark": "",
+        "fullAddress": ""
+    },
+    "currentAddress": "", //Required
+    "employeeId": "", //Not Mandatory but recommended if available
+    "fathersName": "", //Required
+    "alternatePhoneCountryCode": "",
+    "alternatePhone": "",
+    "joiningDate": "",
+    "deduplicationKeys": [ //Not Mandatory but recommended if available. The deduplication key and employee id needs to be same.
+        ""
+    ],
+    "uans": [ //Not Mandatory but recommended if available
+        ""
+    ],
+    "verifications": [ //Verification codes can be added on the basis of scope of work
+        {
+            "code": "CCRV" //Data is not required, Required fields which can be passed in the above request body: Permanent Address, Current Address & Father's Name
+        },
+        {
+            "code": "GDC" //Data is not required, Required fields which can be passed in the above request body: Individual Name , Date of Birth & Father's Name
+        },
+        {
+            "code": "EMPV", // Data is required. 
+            "key": "",
+            "data": {
+                "employmentRecord": {
+                    "nameAsPerEmployerRecords": "", //Mandatory
+                    "employeeId": "",
+                    "employerName": "", //Mandatory
+                    "lastDesignation": "", //Not Mandatory but recommended if available
+                    "jobDescription": "",
+                    "lastWorkingCity": "",
+                    "joiningDate": "", //Not Mandatory but recommended if available
+                    "lastWorkingDate": "", //Not Mandatory but recommended if available
+                    "annualCompensation": "",
+                    "managerName": "",
+                    "managerEmail": "",
+                    "managerPhone": "",
+                    "managerPhoneCountryCode": "",
+                    "hrName": "",
+                    "hrEmail": "",
+                    "hrPhone": "",
+                    "hrPhoneCountryCode": "",
+                    "documents": [ //Mandatory
+                        {
+                            "documentType": "", //Allowed Value: SalarySlip, AppointmentLetter and ExperienceLetter
+                            "fileDataType": "", //Allowed Value: Url, Binary data or base64
+                            "fileName": "",
+                            "fileContent": "" // Content needs to be added as per the selected file data type. Maximum file size accepted is 5mb in base64 & binnary format. 
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "code": "EDUV", // Data is required. 
+            "key": "",
+            "data": {
+                "educationDocument": {
+                    "nameAsPerDocument": "", //Mandaatory
+                    "issueDate": "", //Not Mandatory but recommended if available
+                    "registrationNumber": "", //Not Mandatory but recommended if available
+                    "level": "", //Mandaatory
+                    "nameOfInstitute": "", //Mandaatory
+                    "yearOfPassing": "",
+                    "degree": "",
+                    "fieldOfStudy": "",
+                    "durationInMonths": "",
+                    "grade": "",
+                    "nameOfBoardUniversity": "",
+                    "documents": [
+                        {
+                            "documentType": "", //Allowed Value: EducationalCertificates
+                            "fileDataType": "", //Allowed Value: Url, Binary data or base64
+                            "fileName": "",
+                            "fileContent": "" // Content needs to be added as per the selected file data type. Maximum file size accepted is 5mb in binnary and base64 format. 
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
