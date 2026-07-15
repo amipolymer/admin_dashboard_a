@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Candidate Onboarding Portal</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+
+body{
+    background:#f5f7fa;
+}
+
+.main-card{
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.logo{
+    max-height:90px;
+}
+
+.timeline{
+    overflow-x:auto;
+    white-space:nowrap;
+    padding:20px 0;
+}
+
+.timeline ul{
+    display:flex;
+    list-style:none;
+    padding:0;
+    margin:0;
+    min-width:100%;
+    /* min-width:1600px; */
+}
+
+.timeline li{
+    position:relative;
+    text-align:center;
+    flex:1;
+}
+
+.timeline li:before{
+    content:'';
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#d6d6d6;
+    display:block;
+    margin:auto;
+    z-index:2;
+    position:relative;
+}
+
+.timeline li.active:before{
+    background:#0d6efd;
+}
+
+.timeline li.completed:before{
+    background:#198754;
+}
+
+.timeline li:after{
+    content:'';
+    position:absolute;
+    top:8px;
+    left:50%;
+    width:100%;
+    height:2px;
+    background:#d6d6d6;
+}
+
+.timeline li:last-child:after{
+    display:none;
+}
+
+.timeline span{
+    display:block;
+    margin-top:10px;
+    font-size:13px;
+}
+
+.tab-pane{
+    padding:25px;
+}
+
+.info-box{
+    border:1px solid #e6e6e6;
+    border-radius:10px;
+    padding:20px;
+    background:#fff;
+}
+
+.status-badge{
+    font-size:14px;
+}
+
+.document-card{
+    border:1px solid #e6e6e6;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:15px;
+}
+
+.policy-box{
+    height:500px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+@media(max-width:768px){
+
+    .header-info{
+        text-align:center !important;
+        margin-top:20px;
+    }
+
+}
+.timeline li.rejected:before{
+    background:#dc3545;
+}
+
+.timeline li.active:before{
+    background:#ffc107;
+}
+
+.timeline li.completed:before{
+    background:#198754;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container py-4">
+
+<div class="main-card">
+
+    <!-- HEADER -->
+
+    <div class="p-4 border-bottom">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-4">
+                <img src="logo.png" class="logo" alt="">
+            </div>
+
+            <div class="col-md-8 text-end header-info">
+
+                <h2 class="mb-1">
+                    Candidate Onboarding Portal
+                </h2>
+
+                <p class="text-muted mb-0">
+                    Complete all required onboarding steps
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CANDIDATE INFO -->
+
+    <div class="p-4 border-bottom">
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <h4 class="mb-1">
+                    Risa Hopper
+                </h4>
+
+                <p class="text-muted mb-0">
+                    Candidate ID : EMP1254
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-end">
+
+                <h6 class="mb-1">
+                    Last Due Date
+                </h6>
+
+                <h5 class="text-danger">
+                    21-May-2026
+                </h5>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- TIMELINE -->
+
+    <!-- <div class="timeline border-bottom px-4">
+
+        <ul>
+
+            <li class="completed">
+                <span>Start</span>
+            </li>
+
+            <li class="completed">
+                <span>Info</span>
+            </li>
+
+            <li class="active">
+                <span>Document</span>
+            </li>
+
+            <li>
+                <span>Verify</span>
+            </li>
+
+            <li>
+                <span>Offer</span>
+            </li>
+
+            <li>
+                <span>Receive</span>
+            </li>
+
+            <li>
+                <span>Rejection</span>
+            </li>
+
+            <li>
+                <span>Resubmit</span>
+            </li>
+
+            <li>
+                <span>Verify</span>
+            </li>
+
+            <li>
+                <span>BGV Start</span>
+            </li>
+
+            <li>
+                <span>Join Date</span>
+            </li>
+
+            <li>
+                <span>Requirements</span>
+            </li>
+
+            <li>
+                <span>Appointment</span>
+            </li>
+
+            <li>
+                <span>End</span>
+            </li>
+
+        </ul>
+
+    </div> -->
+
+
+    <div class="timeline border-bottom px-4">
+
+    <ul>
+
+        <li class="completed">
+            <span>Start</span>
+        </li>
+
+        <li class="completed">
+            <span>Profile</span>
+        </li>
+
+        <li class="active">
+            <span>Documents</span>
+        </li>
+
+        <li>
+            <span>Verify</span>
+        </li>
+
+        <li>
+            <span>Offer Letter</span>
+        </li>
+
+        <li>
+            <span>Acceptance</span>
+        </li>
+
+        <li>
+            <span>BGV</span>
+        </li>
+
+        <li>
+            <span>Joining</span>
+        </li>
+
+        <li>
+            <span>Appointment</span>
+        </li>
+
+        <li>
+            <span>Completed</span>
+        </li>
+
+    </ul>
+
+</div>
+    <!-- TABS -->
+
+    <div class="p-4">
+
+        <ul class="nav nav-tabs" role="tablist">
+
+            <li class="nav-item">
+                <button class="nav-link active"
+                    data-bs-toggle="tab"
+                    data-bs-target="#info">
+                    Info
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#document">
+                    Document
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#letter">
+                    Letter
+                </button>
+            </li>
+
+            <li class="nav-item">
+                <button class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#policy">
+                    Company Policy
+                </button>
+            </li>
+
+        </ul>
+
+        <div class="tab-content border border-top-0 bg-white">
+
+            <!-- INFO -->
+
+            <div class="tab-pane fade show active" id="info">
+
+                <div class="d-flex justify-content-between mb-4">
+
+                    <h4>Information Details</h4>
+
+                    <span class="badge bg-success status-badge">
+                        Completed
+                    </span>
+
+                </div>
+
+                <div class="info-box">
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                            <p><strong>Full Name:</strong> Risa Hopper</p>
+                            <p><strong>Email:</strong> demo@email.com</p>
+                            <p><strong>Mobile:</strong> +91 9999999999</p>
+
+                        </div>
+
+                        <div class="col-md-6">
+
+                            <p><strong>City:</strong> Ahmedabad</p>
+                            <p><strong>State:</strong> Gujarat</p>
+                            <p><strong>Country:</strong> India</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- DOCUMENT -->
+
+            <div class="tab-pane fade" id="document">
+
+                <h4 class="mb-4">
+                    Documents
+                </h4>
+
+                <div class="document-card">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div>
+                            <h6>PAN Card</h6>
+                        </div>
+
+                        <span class="badge bg-success">
+                            Verified
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="document-card">
+
+                    <div class="d-flex justify-content-between">
+
+                        <div>
+                            <h6>Aadhaar Card</h6>
+                        </div>
+
+                        <span class="badge bg-warning text-dark">
+                            Pending
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- LETTER -->
+
+            <div class="tab-pane fade" id="letter">
+
+                <h4 class="mb-4">
+                    Offer Letter
+                </h4>
+
+                <div class="alert alert-info">
+
+                    Offer letter will be available
+                    after document verification.
+
+                </div>
+
+            </div>
+
+            <!-- POLICY -->
+
+            <div class="tab-pane fade" id="policy">
+
+                <h4 class="mb-4">
+                    Company Policy
+                </h4>
+
+                <div class="policy-box">
+
+                    <iframe
+                        src="policy.pdf"
+                        width="100%"
+                        height="100%">
+                    </iframe>
+
+                </div>
+
+                <div class="form-check mt-4">
+
+                    <input class="form-check-input"
+                        type="checkbox"
+                        id="acceptPolicy">
+
+                    <label class="form-check-label"
+                        for="acceptPolicy">
+
+                        I have read and accepted the company policy.
+
+                    </label>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

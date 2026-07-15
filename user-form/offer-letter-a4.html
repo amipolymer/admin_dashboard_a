@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Letter — AMI Polymer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        html,
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            color: #231f20;
+            background: #e8e8e8;
+        }
+
+        .letter-ordinal {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 0.72em;
+            font-weight: inherit;
+            font-style: normal;
+            line-height: 0;
+            vertical-align: super;
+            position: relative;
+            top: -0.05em;
+        }
+
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 12mm auto;
+            background: #fff;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Watermark */
+        .watermark {
+            position: absolute;
+            top: 38%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 520px;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .watermark img {
+            width: 100%;
+            height: auto;
+            opacity: 0.05;
+            filter: invert(16%) sepia(98%) saturate(7396%) hue-rotate(244deg) brightness(97%) contrast(145%);
+        }
+
+        .header,
+        .office-section,
+        .section-divider,
+        .section-divider-2,
+        .body-content,
+        .footer {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 10px 30px 0;
+        }
+
+        .logo {
+            margin-bottom: 8px;
+        }
+
+        .logo img {
+            height: 70px;
+            width: auto;
+        }
+
+        .tagline {
+            font-size: 11px;
+            color: #231f20;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .header-message {
+            font-size: 10px;
+            color: #034ea1;
+            font-weight: 600;
+            word-spacing: 5px;
+            padding-bottom: 2px;
+            border-bottom: 1.8px solid #034ea1;
+        }
+
+        /* Office addresses */
+        .office-section {
+            padding: 0 30px;
+            overflow: hidden;
+        }
+
+        .office-column {
+            width: 49%;
+            float: left;
+        }
+
+        .office-column.right {
+            float: right;
+        }
+
+        .office-address {
+            line-height: 1.5;
+            color: #231f20;
+            padding-left: 5px;
+            font-size: 9px;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .section-divider {
+            border-top: 1.8px solid #034ea1;
+            margin: 0 30px;
+        }
+
+        .section-divider-2 {
+            border-top: 1.8px solid #034ea1;
+            margin: 2px 30px 10px;
+        }
+
+        /* Body */
+        .body-content {
+            flex: 1;
+            padding: 0 30px 20px;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .body-content p {
+            line-height: normal;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .spac-1 {
+            line-height: normal;
+        }
+
+        .font12 {
+            font-size: 12px;
+        }
+
+        .mb-2 {
+            margin-bottom: 2px;
+        }
+
+        .mb-15 {
+            margin-bottom: 15px;
+        }
+
+        .strong {
+            font-weight: bold;
+        }
+
+        .doc-list {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .doc-list li {
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+
+        .sign-block {
+            margin-top: 24px;
+            text-align: left;
+        }
+
+        .sign-block img {
+            height: 50px;
+            display: block;
+            margin: 4px 0;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .footer-message {
+            text-align: left;
+            font-size: 11px;
+            padding: 0 30px 6px;
+        }
+
+        .footer-bottom {
+            position: relative;
+            height: 45px;
+            overflow: hidden;
+        }
+
+        .footer-url {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50%;
+            height: 45px;
+            background: #034ea1;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            padding-left: 25px;
+            z-index: 1;
+        }
+
+        .footer-graphic {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            height: 45px;
+            z-index: 2;
+        }
+
+        .footer-graphic img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: fill;
+        }
+
+        /* Print */
+        @media print {
+            html,
+            body {
+                background: #fff;
+            }
+
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+
+            .page:last-child {
+                page-break-after: auto;
+            }
+
+            .footer-url {
+                height: 45px !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .footer-url,
+            .header-message {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* Screen preview toolbar */
+        .preview-bar {
+            max-width: 210mm;
+            margin: 12mm auto 0;
+            padding: 8px 12px;
+            background: #fff;
+            border-radius: 6px 6px 0 0;
+            box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .preview-bar button {
+            background: #034ea1;
+            color: #fff;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        .preview-bar button:hover {
+            background: #023a7a;
+        }
+
+        @media print {
+            .preview-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="preview-bar">
+        <span>A4 Offer Letter Preview — AMI Polymer</span>
+        <button type="button" onclick="window.print()">Print / Save PDF</button>
+    </div>
+
+    <div class="page">
+        <div class="watermark">
+            <img src="Offer-letter/assest/watermark-logo.png" alt="">
+        </div>
+
+        <!-- HEADER -->
+        <div class="header">
+            <div class="logo">
+                <img src="Offer-letter/assest/logo-v1.png" alt="AMI Polymer">
+            </div>
+            <div class="tagline">CIN #U25190MH2003PTC139089</div>
+            <div class="header-message">
+                TUV Nord Certified ISO 9001:2015, 14001:2015, 27001:2013 &amp; ISO 45001:2018 &amp; Clean Room Class 10000
+                Certified Manufacturing Facility
+            </div>
+        </div>
+
+        <!-- OFFICE ADDRESSES -->
+        <div class="office-section">
+            <div class="office-column">
+                <div class="office-address">
+                    <p>
+                        <b>Manufacturing Unit:</b> Plot No. 66-D/E, Govt. Indi. Estate, Near Beekaylon Factory Masat,
+                        Silvassa 369 230, Dadra &amp; Nagar Haveli. India.
+                        Tel. +91 9099 078 432<br>
+                        Mob: +91 7436 003 836 / 9223 411 447 &nbsp; Email: info@amipolymer.com
+                    </p>
+                </div>
+            </div>
+            <div class="office-column right">
+                <div class="office-address">
+                    <p>
+                        <b>Corporate Office:</b> No. 6 &amp; 7, Basement, Western Edge II, Behind Metro Stores, W.E. Highway,
+                        Borivali Mumbai, Maharashtra - 400066 Cell: +91 7436 003 836<br>
+                        For Export: +91 8691 013 939
+                    </p>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+        <div class="section-divider"></div>
+        <div class="section-divider-2"></div>
+
+        <!-- LETTER BODY -->
+        <div class="body-content">
+            <p class="text-right strong">Date: 18<span class="letter-ordinal">th</span> June 2026</p>
+
+            <p class="strong font12 text-left spac-1 mb-2">To,</p>
+            <p class="strong font12 text-left spac-1">{{CANDIDATE_SALUTATION}} {{CANDIDATE_NAME}},</p>
+            <p class="font12 text-left spac-1 mb-15" style="width: 80%;">{{CANDIDATE_ADDRESS}}</p>
+
+            <h5 class="font12 text-left spac-1 mb-15">Subject: Offer Letter for Employment</h5>
+            <h5 class="font12 text-left spac-1">Dear {{CANDIDATE_NAME}},</h5>
+            <h5 class="font12 text-left spac-1">Congratulations!</h5>
+            <br>
+
+            <p class="mb-15">
+                With reference to your application and the subsequent interviews and discussions held with
+                us, we are pleased to offer you employment for the position of
+                <span class="strong">"{{DESIGNATION}} – {{DEPARTMENT}}"</span> under
+                <span class="strong">"{{GRADE}}"</span>.
+            </p>
+
+            <p class="mb-15">
+                You will be primarily based at <span class="strong">{{LOCATION}}.</span> and are
+                required to report for duty on or before <span class="strong">22<span class="letter-ordinal">nd</span> July 2026</span>.
+            </p>
+
+            <p class="mb-15">
+                This offer of employment and your subsequent appointment are subject to the satisfactory
+                completion and clearance of reference checks, medical fitness, and background verification as conducted
+                by the Company or its authorized agency, in accordance with Company policy.
+            </p>
+
+            <p class="mb-15">
+                Your annual compensation for this role will be <span class="strong">₹24,00,000 (Rupees Twenty Four Lakhs Only)</span> out of which <span class="strong">₹22,00,000 (Fixed)</span> + <span class="strong">₹2,00,000 (Annual Retention Award to be paid after successful completion of 01 year and shall be part of total annual CTC)</span>.
+                The detailed salary breakup, structured in accordance with Company policy, applicable income tax rules,
+                and statutory regulations, will be shared with you separately. Any performance-linked variable pay, if
+                applicable, shall be governed by Company policy and defined performance parameters. A formal
+                <span class="strong">Letter of Appointment</span> containing detailed terms and conditions of employment
+                shall be issued to you upon joining.
+            </p>
+
+            <p class="mb-15">
+                For the purpose of Company records and to ensure a smooth on boarding process, you are
+                required to submit the following documents at the time of joining:
+            </p>
+
+            <ol class="doc-list text-left">
+                <li>Three recent passport-size colour photographs</li>
+                <li>Copies of all educational certificates (originals to be produced for verification)</li>
+                <li>Copies of experience and/or relieving letters from all previous employers</li>
+                <li>Last three months' salary slips from your previous employer</li>
+                <li>Aadhar &amp; PAN Card</li>
+                <li>EPF UAN details</li>
+                <li>Current address proof</li>
+                <li>Bank account details</li>
+                <li>Acknowledged copy of resignation letter from previous employer</li>
+                <li>Full and Final Settlement statement from the last employer, if available</li>
+                <li>Copy of any non-compete or confidentiality agreement executed with the previous employer, if applicable</li>
+                <li>Medical test reports along with medical fitness certificate, if required</li>
+            </ol>
+
+            <p class="mb-15">
+                We look forward to your valuable contribution and hope for a mutually rewarding association. Should you
+                require any clarification, you may contact the HR Department. Kindly sign and return the duplicate copy
+                of this letter within twenty-four (24) hours of receipt as a token of your acceptance of the above
+                offer.
+            </p>
+
+            <div class="sign-block">
+                <p>
+                    For {{COMPANY_NAME}}<br>
+                    <img src="" alt="Authorized Signatory" id="signatory-img" style="display:none;">
+                    <span id="signatory-placeholder" style="display:inline-block; height:50px;"></span><br>
+                    Authorized Signatory
+                </p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer-message">
+                Regd. Office: No. 6 &amp; 7, Basement, Western Edge II, Behind Metro Stores, W.E. Highway, Borivali Mumbai,
+                Maharashtra - 400066
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-url">www.amipolymer.com</div>
+                <div class="footer-graphic">
+                    <img src="Offer-letter/assest/footer-shape.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sample data for browser preview (remove or replace in production) -->
+    <script>
+        (function () {
+            var sample = {
+                '{{OFFER_DATE}}': '18<span class="letter-ordinal">th</span> June 2026',
+                '{{CANDIDATE_SALUTATION}}': 'Ms.',
+                '{{CANDIDATE_NAME}}': 'Candidate Name',
+                '{{CANDIDATE_ADDRESS}}': 'Room No. 10, Vishwas Pathare Chawl, S.V. Road, Near Old Police Station, Ovaripada, VTC: Dahisar East, PO: Dahisar, Mumbai, Maharashtra - 400068',
+                '{{DESIGNATION}}': 'Designation',
+                '{{DEPARTMENT}}': 'Department',
+                '{{GRADE}}': 'L-2 Grade',
+                '{{LOCATION}}': 'Location (India)',
+                '{{JOINING_DATE}}': '22<span class="letter-ordinal">nd</span> July 2026',
+                '{{COMPANY_NAME}}': 'Ami Polymer Pvt. Ltd.'
+            };
+            var html = document.querySelector('.page').innerHTML;
+            Object.keys(sample).forEach(function (key) {
+                html = html.split(key).join(sample[key]);
+            });
+            document.querySelector('.page').innerHTML = html;
+        })();
+    </script>
+
+</body>
+
+</html>
