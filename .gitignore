@@ -1,0 +1,45 @@
+# OS / Editor junk
+*.log
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env-live
+.env.*
+!.env.example
+
+# IDEs
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode
+/.zed
+/.phpactor.json
+/phpunit.result.cache
+form_join/sr-hr-team.json
+# Node / Build
+/node_modules
+/public/build
+/public/hot
+
+# Composer
+/vendor
+/auth.json
+Homestead.json
+Homestead.yaml
+
+# Laravel Storage
+/storage/*.key
+/storage/pail
+/storage/app/*
+!/storage/app/.gitignore   # keep folder structure
+
+# Public Storage
+/public/storage
+/md-file
+
+# Unused views
+/resources/views/pages/not-used
+/md-file

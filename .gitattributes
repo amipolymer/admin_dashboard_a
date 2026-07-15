@@ -1,0 +1,21 @@
+# Normalize line endings to LF
+* text=auto eol=lf
+
+# Laravel-specific files
+*.blade.php text diff=html
+*.php       text diff=php
+*.js        text
+*.css       text
+*.html      text diff=html
+*.md        text diff=markdown
+*.json      text
+*.yml       text
+*.yaml      text
+*.env       text
+*.lock      text
+*.xml       text
+
+# Export-ignore for packaging
+/.github           export-ignore
+CHANGELOG.md       export-ignore
+.styleci.yml       export-ignore

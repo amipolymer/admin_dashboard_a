@@ -1,0 +1,1073 @@
+
+Add Driving License Document
+{
+  "id": -9007199254740991,
+  "documentUID": "string",
+  "nameAsPerDocument": "string",
+  "files": [
+    {
+      "fileType": "image, pdf",
+      "side": "Front",
+      "servingUrl": "string"
+    }
+  ],
+  "legalGuardianName": "string",
+  "placeOfIssue": "string",
+  "state": "string",
+  "dob": "1997-05-13",
+  "issueDate": "2022-01-11",
+  "expiryDate": "2024-01-01"
+}
+
+
+local address verification for individual
+
+
+{
+  "state": "Requested",
+  "requestId": -9007199254740991,
+  "lavReport": {
+    "verifiedAddress": {
+      "co": "string",
+      "line1": "string",
+      "line2": "string",
+      "locality": "string",
+      "landmark": "string",
+      "vtc": "string",
+      "district": "string",
+      "state": "string",
+      "pincode": "string",
+      "fullAddress": "string",
+      "lFullAddress": "string",
+      "lnCode": "hi-IN",
+      "id": 0
+    },
+    "givenAddress": "string",
+    "lGivenAddress": "string",
+    "lnCode": "hi-IN",
+    "addressGeoPoint": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "ownershipStatus": "Rented",
+    "stayingSince": "string",
+    "typeOfAddress": "Residential",
+    "interviewee1name": "string",
+    "interviewee1phone": "string",
+    "interviewee1Relationship": "string",
+    "interviewee2name": "string",
+    "interviewee2phone": "string",
+    "interviewee2Relationship": "string",
+    "imageUrl": "string",
+    "landmarkImageUrl": "string",
+    "nameOfVerifier": "string",
+    "doneOn": "2019-08-24T14:15:22Z",
+    "timeOfVisit": "2019-08-24T14:15:22Z",
+    "requestResult": "Requested",
+    "nonTraceableReason": "string",
+    "remarks": "string",
+    "pdfServingUrl": "string",
+    "files": [
+      {
+        "id": "string",
+        "fileType": "string",
+        "fileName": "string",
+        "side": "Front",
+        "servingUrl": "string"
+      }
+    ]
+  },
+  "addressId": 0,
+  "closedReason": "string",
+  "closedRemarks": "string",
+  "migrated": true,
+  "migratedAPVRequest": {
+    "state": "Requested",
+    "requestId": 0,
+    "apvReport": {
+      "givenAddress": "string",
+      "lGivenAddress": "string",
+      "pin": "string",
+      "pinReceived": "string",
+      "letterDispatchDate": "2019-08-24T14:15:22Z",
+      "letterDeliveryDate": "2019-08-24T14:15:22Z",
+      "pinVerificationDate": "2019-08-24T14:15:22Z",
+      "modeOfVerification": "IncomingMessage",
+      "result": "Verified",
+      "nonTraceableReason": "string",
+      "remarks": "string",
+      "geographicLocationPoint": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pdfServingUrl": "string",
+      "files": [
+        {
+          "id": "string",
+          "fileType": "string",
+          "fileName": "string",
+          "side": "Front",
+          "servingUrl": "string"
+        }
+      ]
+    },
+    "addressId": 0,
+    "migrated": true,
+    "migratedLAVRequest": {
+      "state": "Requested",
+      "requestId": 0,
+      "lavReport": {
+        "verifiedAddress": {
+          "co": "string",
+          "line1": "string",
+          "line2": "string",
+          "locality": "string",
+          "landmark": "string",
+          "vtc": "string",
+          "district": "string",
+          "state": "string",
+          "pincode": "string",
+          "fullAddress": "string",
+          "lFullAddress": "string",
+          "lnCode": "hi-IN",
+          "id": 0
+        },
+        "givenAddress": "string",
+        "lGivenAddress": "string",
+        "lnCode": "hi-IN",
+        "addressGeoPoint": {
+          "latitude": 0,
+          "longitude": 0
+        },
+        "ownershipStatus": "Rented",
+        "stayingSince": "string",
+        "typeOfAddress": "Residential",
+        "interviewee1name": "string",
+        "interviewee1phone": "string",
+        "interviewee1Relationship": "string",
+        "interviewee2name": "string",
+        "interviewee2phone": "string",
+        "interviewee2Relationship": "string",
+        "imageUrl": "string",
+        "landmarkImageUrl": "string",
+        "nameOfVerifier": "string",
+        "doneOn": "2019-08-24T14:15:22Z",
+        "timeOfVisit": "2019-08-24T14:15:22Z",
+        "requestResult": "Requested",
+        "nonTraceableReason": "string",
+        "remarks": "string",
+        "pdfServingUrl": "string",
+        "files": [
+          {
+            "id": "string",
+            "fileType": "string",
+            "fileName": "string",
+            "side": "Front",
+            "servingUrl": "string"
+          }
+        ]
+      },
+      "addressId": 0,
+      "closedReason": "string",
+      "closedRemarks": "string",
+      "migrated": true,
+      "migratedAPVRequest": {},
+      "created": "1648209182000",
+      "dataSufficiencyDate": "1648209182000",
+      "completedDate": "1648209182000",
+      "closedDate": "1648209182000"
+    },
+    "closedReason": "string",
+    "closedRemarks": "string",
+    "created": "1648209182000",
+    "dataSufficiencyDate": "1648209182000",
+    "completedDate": "1648209182000",
+    "closedDate": "1648209182000"
+  },
+  "created": "1648209182000",
+  "dataSufficiencyDate": "1648209182000",
+  "completedDate": "1648209182000",
+  "closedDate": "1648209182000"
+}
+
+permanent address verification for individual
+
+{
+  "requestId": -9007199254740991,
+  "addressId": 0,
+  "state": "Requested",
+  "pavReport": {
+    "verifiedAddress": {
+      "co": "string",
+      "line1": "string",
+      "line2": "string",
+      "locality": "string",
+      "landmark": "string",
+      "vtc": "string",
+      "district": "string",
+      "state": "string",
+      "pincode": "string",
+      "fullAddress": "string",
+      "lFullAddress": "string",
+      "lnCode": "hi-IN",
+      "id": 0
+    },
+    "givenAddress": "string",
+    "lGivenAddress": "string",
+    "lnCode": "hi-IN",
+    "addressGeoPoint": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "ownershipStatus": "Rented",
+    "stayingSince": "string",
+    "typeOfAddress": "Residential",
+    "interviewee1name": "string",
+    "interviewee1phone": "string",
+    "interviewee1Relationship": "string",
+    "interviewee2name": "string",
+    "interviewee2phone": "string",
+    "interviewee2Relationship": "string",
+    "imageUrl": "string",
+    "landmarkImageUrl": "string",
+    "nameOfVerifier": "string",
+    "doneOn": "2019-08-24T14:15:22Z",
+    "timeOfVisit": "2019-08-24T14:15:22Z",
+    "requestResult": "Requested",
+    "nonTraceableReason": "string",
+    "remarks": "string",
+    "pdfServingUrl": "string",
+    "files": [
+      {
+        "id": "string",
+        "fileType": "string",
+        "fileName": "string",
+        "side": "Front",
+        "servingUrl": "string"
+      }
+    ]
+  },
+  "closedReason": "string",
+  "closedRemarks": "string",
+  "migrated": true,
+  "migratedAPVRequest": {
+    "requestId": 0,
+    "addressId": 0,
+    "state": "Requested",
+    "apvReport": {
+      "givenAddress": "string",
+      "lGivenAddress": "string",
+      "pin": "string",
+      "pinReceived": "string",
+      "letterDispatchDate": "2019-08-24T14:15:22Z",
+      "letterDeliveryDate": "2019-08-24T14:15:22Z",
+      "pinVerificationDate": "2019-08-24T14:15:22Z",
+      "modeOfVerification": "IncomingMessage",
+      "result": "Verified",
+      "nonTraceableReason": "string",
+      "remarks": "string",
+      "geographicLocationPoint": {
+        "latitude": 0,
+        "longitude": 0
+      },
+      "pdfServingUrl": "string",
+      "files": [
+        {
+          "id": "string",
+          "fileType": "string",
+          "fileName": "string",
+          "side": "Front",
+          "servingUrl": "string"
+        }
+      ]
+    },
+    "migrated": true,
+    "migratedPAVRequest": {
+      "requestId": 0,
+      "addressId": 0,
+      "state": "Requested",
+      "pavReport": {
+        "verifiedAddress": {
+          "co": "string",
+          "line1": "string",
+          "line2": "string",
+          "locality": "string",
+          "landmark": "string",
+          "vtc": "string",
+          "district": "string",
+          "state": "string",
+          "pincode": "string",
+          "fullAddress": "string",
+          "lFullAddress": "string",
+          "lnCode": "hi-IN",
+          "id": 0
+        },
+        "givenAddress": "string",
+        "lGivenAddress": "string",
+        "lnCode": "hi-IN",
+        "addressGeoPoint": {
+          "latitude": 0,
+          "longitude": 0
+        },
+        "ownershipStatus": "Rented",
+        "stayingSince": "string",
+        "typeOfAddress": "Residential",
+        "interviewee1name": "string",
+        "interviewee1phone": "string",
+        "interviewee1Relationship": "string",
+        "interviewee2name": "string",
+        "interviewee2phone": "string",
+        "interviewee2Relationship": "string",
+        "imageUrl": "string",
+        "landmarkImageUrl": "string",
+        "nameOfVerifier": "string",
+        "doneOn": "2019-08-24T14:15:22Z",
+        "timeOfVisit": "2019-08-24T14:15:22Z",
+        "requestResult": "Requested",
+        "nonTraceableReason": "string",
+        "remarks": "string",
+        "pdfServingUrl": "string",
+        "files": [
+          {
+            "id": "string",
+            "fileType": "string",
+            "fileName": "string",
+            "side": "Front",
+            "servingUrl": "string"
+          }
+        ]
+      },
+      "closedReason": "string",
+      "closedRemarks": "string",
+      "migrated": true,
+      "migratedAPVRequest": {},
+      "created": "1648209182000",
+      "dataSufficiencyDate": "1648209182000",
+      "completedDate": "1648209182000",
+      "closedDate": "1648209182000"
+    },
+    "closedReason": "string",
+    "closedRemarks": "string",
+    "created": "1648209182000",
+    "dataSufficiencyDate": "1648209182000",
+    "completedDate": "1648209182000",
+    "closedDate": "1648209182000"
+  },
+  "created": "1648209182000",
+  "dataSufficiencyDate": "1648209182000",
+  "completedDate": "1648209182000",
+  "closedDate": "1648209182000"
+}
+
+
+criminal court record verification for individual
+
+{
+  "individualId": -9007199254740991,
+  "requestId": -9007199254740991,
+  "state": "Requested",
+  "report": {
+    "result": "Success",
+    "reason": "string",
+    "remarks": "string"
+  },
+  "caseList": [
+    {
+      "id": 0,
+      "caseUrl": "string",
+      "caseCode": "string",
+      "state": "string",
+      "cnrNumber": "string",
+      "district": "string",
+      "type": "DISTRICT_AND_SESSION_COURT",
+      "caseContent": "string",
+      "filingNumber": "string",
+      "filingDate": "2019-08-24T14:15:22Z",
+      "caseType": "string",
+      "caseCategory": "string",
+      "firstHearingDate": "2019-08-24T14:15:22Z",
+      "nextHearingDate": "2019-08-24T14:15:22Z",
+      "stageOfCase": "string",
+      "courtNoJudge": "string",
+      "petitionerName": [
+        "string"
+      ],
+      "respondentName": [
+        "string"
+      ],
+      "matchType": "EXACT",
+      "evidenceFiles": [
+        {
+          "evidenceType": "FIRCopy",
+          "file": [
+            {
+              "fileType": "image, pdf",
+              "side": "Front",
+              "servingUrl": "string"
+            }
+          ]
+        }
+      ],
+      "acts": [
+        {
+          "type": "string",
+          "description": "string",
+          "code": "string"
+        }
+      ],
+      "decisionDate": "2019-08-24T14:15:22Z",
+      "caseStatus": "Ongoing",
+      "criminalActSeverity": "High",
+      "caseDecision": "Convicted",
+      "foundNearAddressType": "Current",
+      "individualRole": "Petitioner",
+      "matchCriteria": {
+        "NAME": "ExactMatch",
+        "FATHER_NAME": "ExactMatch",
+        "HOUSE_NUMBER": "ExactMatch",
+        "LOCALITY": "ExactMatch",
+        "CITY": "ExactMatch",
+        "VILLAGE": "ExactMatch"
+      }
+    }
+  ],
+  "closedRemarks": "string",
+  "closedReason": "string",
+  "created": "2019-08-24T14:15:22Z",
+  "dataSufficiencyDate": "2019-08-24T14:15:22Z",
+  "completedDate": "1648209182000",
+  "closedDate": "1648209182000",
+  "pdfServingUrl": "string",
+  "files": [
+    {
+      "id": "string",
+      "fileType": "string",
+      "fileName": "string",
+      "side": "Front",
+      "servingUrl": "string"
+    }
+  ]
+}
+
+
+Add Education Document
+{
+  "id": 0,
+  "nameAsPerDocument": "string",
+  "level": "NO_EDUCATION",       //
+  // [NO_EDUCATION,LESS_THEN_FIFTH_STD,FIFTH_STD,EIGHT_STD,TENTH_STD,TWELFTH_STD,DIPLOMA,GRADUATE,PROFESSIONAL_COURSE,MASTERS,PHD,POST_GRADUATE]
+  "registrationNumber": "string",
+  "issueDate": "string",
+  "nameOfInstitute": "string",
+  "nameOfBoardUniversity": "string",
+  "yearOfPassing": 0,
+  "degree": "string",
+  "fieldOfStudy": "string",
+  "durationInMonths": 0,
+  "grade": "string",
+  "files": [
+    {
+      "fileType": "image, pdf",
+      "side": "Front",
+      "servingUrl": "string"
+    }
+  ]
+}
+
+
+Add Employment Record
+
+{
+  "id": 0,
+  "individualId": 0,
+  "nameAsPerEmployerRecords": "string",
+  "employeeId": "string",
+  "employerName": "string",
+  "lastDesignation": "string",
+  "jobDescription": "string",
+  "lastWorkingCity": "string",
+  "joiningDate": "2015-04-19",
+  "lastWorkingDate": "2019-11-02",
+  "annualCompensation": 0,
+  "managerName": "string",
+  "managerEmail": "string",
+  "managerPhone": "string",
+  "managerPhoneCountryCode": "string",
+  "hrName": "string",
+  "hrEmail": "string",
+  "hrPhone": "string",
+  "hrPhoneCountryCode": "string",
+  "currentEmployment": true,
+  "documents": {
+    "id": 0,
+    "documentType": {
+      "documentType": "ProfileImage"
+    },
+    "files": [
+      {
+        "fileType": "image, pdf",
+        "side": "Front",
+        "servingUrl": "string"
+      }
+    ]
+  }
+}
+
+Request police verification for individual
+
+{
+  "requestId": -9007199254740991,
+  "address": {
+    "co": "string",
+    "line1": "string",
+    "line2": "string",
+    "locality": "string",
+    "landmark": "string",
+    "vtc": "string",
+    "district": "string",
+    "state": "string",
+    "pincode": "string",
+    "fullAddress": "string",
+    "lFullAddress": "string",
+    "lnCode": "hi-IN",
+    "id": 0
+  },
+  "state": "Requested",
+  "pccReport": {
+    "status": "Success",
+    "reason": "string",
+    "receipt": {
+      "fileType": "image, pdf",
+      "side": "Front",
+      "servingUrl": "string"
+    },
+    "issueDate": "2019-08-24T14:15:22Z",
+    "state": "AndhraPradesh",
+    "recordFound": false,
+    "note": "string",
+    "files": [
+      {
+        "id": "string",
+        "fileType": "string",
+        "fileName": "string",
+        "side": "Front",
+        "servingUrl": "string"
+      }
+    ],
+    "pdfServingUrl": "string"
+  }
+}
+
+Criminal Record Check via Law Firm for individual
+
+
+{
+  "requestId": 0,
+  "state": "Requested",
+  "report": {
+    "dateOfVerification": "2019-08-24T14:15:22Z",
+    "result": "Success",
+    "reason": "string",
+    "state": "string",
+    "files": [
+      {
+        "id": "string",
+        "fileType": "string",
+        "fileName": "string",
+        "side": "Front",
+        "servingUrl": "string"
+      }
+    ],
+    "verifiedAddress": "string",
+    "pdfServingUrl": "string"
+  },
+  "closedReason": "string",
+  "closedRemarks": "string",
+  "created": "1648209182000",
+  "dataSufficiencyDate": "1648209182000",
+  "completedDate": "1648209182000",
+  "closedDate": "1648209182000"
+}
+
+PRC for individual
+{
+  "requestId": 0,
+  "referenceProvider": {
+    "id": 0,
+    "name": "string",
+    "phone": "string",
+    "phoneCountryCode": "string",
+    "email": "string",
+    "organization": "string",
+    "designation": "string"
+  },
+  "state": "Requested",
+  "dataCollectionSchemaId": 0,
+  "prcReport": {
+    "reportDetails": "string",
+    "referenceDenied": true,
+    "referenceDeniedReason": "string",
+    "otherDeniedReason": "string",
+    "result": "ReferenceProvided",
+    "remarks": "string",
+    "pdfServingUrl": "string",
+    "files": [
+      {
+        "id": "string",
+        "fileType": "string",
+        "fileName": "string",
+        "side": "Front",
+        "servingUrl": "string"
+      }
+    ]
+  },
+  "closedReason": "string",
+  "closedRemarks": "string",
+  "created": "1648209182000",
+  "dataSufficiencyDate": "1648209182000",
+  "completedDate": "1648209182000",
+  "closedDate": "1648209182000"
+}
+
+Credit Check for individual
+
+{
+  "requestId": 0,
+  "created": "2019-08-24",
+  "dataSufficiencyDate": "2019-08-24",
+  "completedDate": "2019-08-24",
+  "closedDate": "2019-08-24",
+  "state": "Requested",
+  "panDocumentId": 0,
+  "addressId": 0,
+  "closedReason": "string",
+  "closedRemarks": "string",
+  "ccReport": {
+    "scoreValue": 0,
+    "creditCheckPartner": "string",
+    "bureau": " Equifax",
+    "category": "string",
+    "result": "Success",
+    "givenPanDocument": "string",
+    "givenAddress": "string",
+    "details": {
+      "accountSummary": {
+        "noOfAccounts": 0,
+        "noOfActiveAccounts": 0,
+        "noOfWriteOffs": 0,
+        "totalPastDue": 0,
+        "mostSevereStatusWithIn24Months": "string",
+        "singleHighestCredit": "string",
+        "singleHighestSanctionAmoun": 0,
+        "totalHighCredit": 0,
+        "averageOpenBalance": 0,
+        "singleHighestBalance": 0,
+        "noOfPastDueAccounts": 0,
+        "noOfZeroBalanceAccounts": 0,
+        "recentAccount": "string",
+        "oldestAccount": "string",
+        "totalBalanceAmount": 0,
+        "totalSanctionAmount": 0,
+        "totalCreditLimit": 0,
+        "totalMonthlyPaymentAmount": 0
+      },
+      "otherKeyIndicators": {
+        "ageOfOldestTrade": 0,
+        "numberOfOpenTrades": 0,
+        "allLinesEverWritten": 0,
+        "allLinesEverWrittenIn9Months": 0,
+        "allLinesEverWrittenIn6Months": 0
+      },
+      "enquirySummary": {
+        "purpose": "string",
+        "total": 0,
+        "past30Days": 0,
+        "past12Months": 0,
+        "past24Months": 0,
+        "recent": "string"
+      },
+      "enquiries": [
+        {
+          "institution": "string",
+          "date": "string",
+          "time": "string",
+          "requestPurpose": "string"
+        }
+      ],
+      "accountDetails": [
+        {
+          "maskedAccountNumber": "string",
+          "institution": "string",
+          "accountType": "string",
+          "ownershipType": "string",
+          "balance": 0,
+          "pastDueAmount": 0,
+          "lastPayment": 0,
+          "open": "string",
+          "sanctionAmount": 0,
+          "dateReported": "string",
+          "dateOpened": "string",
+          "reason": "string",
+          "interestRate": 0,
+          "repaymentTenure": 0,
+          "disputeCode": "string",
+          "termFrequency": "string",
+          "collateralValue": "string",
+          "collateralType": "string",
+          "accountStatus": "string",
+          "assetClassification": "string",
+          "suitFiledStatus": "string",
+          "reportedDate": "string",
+          "highCredit": 0,
+          "lastPaymentDate": "string",
+          "creditLimit": 0,
+          "dateClosed": "string"
+        }
+      ],
+      "scoringElements": [
+        "string"
+      ],
+      "recentActivities": {
+        "accountsDeliquent": 0,
+        "accountsOpened": 0,
+        "totalInquiries": 0,
+        "accountsUpdated": 0
+      }
+    }
+  }
+}
+
+BAV verification for individual (bank account verification)
+
+{
+  "requestId": 0,
+  "created": "2019-08-24",
+  "dataSufficiencyDate": "2019-08-24",
+  "bankAccountId": "string",
+  "state": "string",
+  "bavReport": {
+    "accountExists": true,
+    "accountHolderName": "string",
+    "remarks": "string",
+    "result": "Success",
+    "givenBankAccountForVerification": "string"
+  },
+  "closedReason": "string",
+  "closedRemarks": "string"
+}
+
+PPV - Passport Verification
+
+{
+  "id": 0,
+  "files": [
+    {
+      "fileType": "image, pdf",
+      "side": "Front",
+      "servingUrl": "string"
+    }
+  ],
+  "passportNumber": "string",
+  "dateOfExpiry": "2019-08-24",
+  "dob": "2019-08-24",
+  "issuingCountry": "string",
+  "mrzCode": "string",
+  "nationality": "string",
+  "gender": "M"
+}
+
+drug test check for individual
+
+{
+  "requestId": -9007199254740991,
+  "addressId": 0,
+  "state": "Requested",
+  "drgReport": {
+    "address": "string",
+    "panelNumber": "string",
+    "drugsTested": "string",
+    "result": "Success",
+    "reason": "string",
+    "remarks": "string",
+    "pdfServingUrl": "string",
+    "files": [
+      {
+        "id": "string",
+        "fileType": "string",
+        "fileName": "string",
+        "side": "Front",
+        "servingUrl": "string"
+      }
+    ]
+  },
+  "closedReason": "string",
+  "closedRemarks": "string",
+  "created": "1648209182000",
+  "dataSufficiencyDate": "1648209182000",
+  "completedDate": "1648209182000",
+  "closedDate": "1648209182000"
+}
+
+Add CV Document
+{
+  "requestId": 0,
+  "state": "Requested",
+  "cvDocument": {
+    "id": 0,
+    "files": [
+      {
+        "id": "string",
+        "fileType": "image, pdf",
+        "side": "Front",
+        "servingUrl": "string"
+      }
+    ]
+  },
+  "cvvReportResponse": {
+    "educationInfo": [
+      {
+        "givenEducationInfo": {
+          "instituteName": "string",
+          "yearOfCompletion": "string",
+          "educationLevel": "string",
+          "courseName": "string"
+        },
+        "verifiedEducationInfo": {
+          "instituteName": "string",
+          "yearOfCompletion": "string",
+          "educationLevel": "string",
+          "courseName": "string"
+        }
+      }
+    ],
+    "employmentInfo": [
+      {
+        "givenEmploymentInfo": "string",
+        "verifiedEmploymentInfo": "string"
+      }
+    ],
+    "files": [
+      {
+        "id": "string",
+        "fileType": "image, pdf",
+        "side": "Front",
+        "servingUrl": "string"
+      }
+    ],
+    "gaps": "string",
+    "discrepancy": "string",
+    "result": "Success",
+    "reason": "string",
+    "remarks": "string",
+    "pdfServingUrl": "string"
+  },
+  "closedReason": "string",
+  "closedRemarks": "string",
+  "created": "1648209182000",
+  "dataSufficiencyDate": "1648209182000",
+  "completedDate": "1648209182000",
+  "closedDate": "1648209182000"
+}
+
+
+Request employment history check for individual
+
+{
+  "requestId": -9007199254740991,
+  "addressId": 0,
+  "state": "Requested",
+  "ehcReport": {
+    "uan": "string",
+    "candidateName": "string",
+    "guardianName": "string",
+    "epfoRecordCount": "string",
+    "source": "string",
+    "result": "Success",
+    "reason": "string",
+    "remarks": "string",
+    "pdfServingUrl": "string",
+    "files": [
+      {
+        "id": "string",
+        "fileType": "string",
+        "fileName": "string",
+        "side": "Front",
+        "servingUrl": "string"
+      }
+    ]
+  },
+  "closedReason": "string",
+  "closedRemarks": "string",
+  "created": "1648209182000",
+  "dataSufficiencyDate": "1648209182000",
+  "completedDate": "1648209182000",
+  "closedDate": "1648209182000"
+}
+
+Onboards an individual in community
+
+{
+  "id": -9007199254740991,
+  "name": "string",
+  "professionsId": "string",
+  "otherProfession": "string",
+  "city": "string",
+  "gender": "M",
+  "phone": "string",
+  "phoneCountryCode": "string",
+  "alternatePhone": "string",
+  "alternatePhoneCountryCode": "string",
+  "email": "string",
+  "educationLevel": "string",
+  "dob": "string",
+  "fathersName": "string",
+  "profileImageUrl": "string",
+  "permanentAddress": {
+    "co": "string",
+    "line1": "string",
+    "line2": "string",
+    "locality": "string",
+    "landmark": "string",
+    "vtc": "string",
+    "district": "string",
+    "state": "string",
+    "pincode": "string",
+    "fullAddress": "string",
+    "lFullAddress": "string",
+    "lnCode": "hi-IN",
+    "country": "string",
+    "id": 0
+  },
+  "currentAddress": "string",
+  "currentAddressCountry": "string",
+  "currentAddressId": 0,
+  "employeeId": "string",
+  "documents": [
+    {
+      "id": 0,
+      "documentUID": "string",
+      "nameAsPerDocument": "string",
+      "files": [
+        {
+          "fileType": "image, pdf",
+          "side": "Front",
+          "servingUrl": "string"
+        }
+      ],
+      "documentType": "ProfileImage"
+    }
+  ],
+  "joiningDate": "2019-08-24T14:15:22Z",
+  "customDocuments": [
+    {
+      "id": 0,
+      "documentType": "string",
+      "data": "string"
+    }
+  ],
+  "uidvRequestId": -9007199254740991,
+  "lCurrentAddress": "string",
+  "lnCode": "hi-IN",
+  "tags": [
+    {
+      "id": 0,
+      "tagName": "string",
+      "value": "string"
+    }
+  ],
+  "deduplicationKeys": [
+    "string"
+  ],
+  "uans": [
+    "string"
+  ]
+}
+
+
+Onboards and initiates verifications
+
+{
+  "individual": {
+    "id": 0,
+    "name": "string",
+    "professionsId": "string",
+    "otherProfession": "string",
+    "city": "string",
+    "gender": "M",
+    "phone": "string",
+    "phoneCountryCode": "string",
+    "alternatePhone": "string",
+    "alternatePhoneCountryCode": "string",
+    "email": "string",
+    "educationLevel": "string",
+    "dob": "string",
+    "fathersName": "string",
+    "profileImageUrl": "string",
+    "permanentAddress": {
+      "co": "string",
+      "line1": "string",
+      "line2": "string",
+      "locality": "string",
+      "landmark": "string",
+      "vtc": "string",
+      "district": "string",
+      "state": "string",
+      "pincode": "string",
+      "fullAddress": "string",
+      "lFullAddress": "string",
+      "lnCode": "hi-IN",
+      "country": "string",
+      "id": 0
+    },
+    "currentAddress": "string",
+    "currentAddressCountry": "string",
+    "currentAddressId": 0,
+    "employeeId": "string",
+    "documents": [
+      {
+        "id": 0,
+        "documentUID": "string",
+        "nameAsPerDocument": "string",
+        "files": [
+          {
+            "fileType": "image, pdf",
+            "side": "Front",
+            "servingUrl": "string"
+          }
+        ],
+        "documentType": "ProfileImage"
+      }
+    ],
+    "joiningDate": "2019-08-24T14:15:22Z",
+    "customDocuments": [
+      {
+        "id": 0,
+        "documentType": "string",
+        "data": "string"
+      }
+    ],
+    "uidvRequestId": 0,
+    "lCurrentAddress": "string",
+    "lnCode": "hi-IN",
+    "tags": [
+      {
+        "id": 0,
+        "tagName": "string",
+        "value": "string"
+      }
+    ],
+    "deduplicationKeys": [
+      "string"
+    ],
+    "uans": [
+      "string"
+    ]
+  },
+  "verifications": [
+    {
+      "code": "LAV",
+      "key": "string",
+      "requestId": 0
+    }
+  ]
+}
